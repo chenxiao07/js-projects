@@ -58,16 +58,17 @@
     function _minus(array1, array2){
         var resultDigits = [],
             borrowed     = 0,
-            currentDigit, i, j, operator;
+            currentDigit, i, j, operator1, operator2;
         for (i = array1.length - 1, j = array2.length - 1; i > -1; i --, j --){
-            array1[i] -= borrowed;
-            operator   = (j > -1) ? array2[j] : 0;
+            operator1  = array1[i];
+            operator1 -= borrowed;
+            operator2  = (j > -1) ? array2[j] : 0;
             borrowed   = 0;
-            if (array1[i] < operator){
+            if (operator1 < operator2){
                 borrowed   = 1;
-                array1[i] += 10;
+                operator1 += 10;
             }
-            resultDigits.push(array1[i] - operator);
+            resultDigits.push(operator1 - operator2);
         }
         return _reverse(resultDigits);
     }
@@ -108,10 +109,11 @@
         for (i = length2 - 1; i < length1; i ++){
             currentDigit = 0;
             tempArray.push(array1[i]);
+            _removeFirstZeros(tempArray);
             while (_compareArray(tempArray, array2) >= 0){
-                _removeFirstZeros(tempArray);
                 currentDigit += 1;
                 tempArray     = _minus(tempArray, array2);
+                _removeFirstZeros(tempArray);
             }
             result.quotientDigits.push(currentDigit);
         }
@@ -154,6 +156,20 @@
                  : new BigInt('-' + this.originStr);
         },
 
+        compare : function(that){
+            if (this.isNegative !== that.isNegative){
+                return this.isNegative ? -1 : 1;
+            }
+            var result = this.compareDigits(that);
+            if (this.isNegative){
+                result = -result;
+            }
+            return result;
+        },
+        compareDigits : function(that){
+            return _compareArray(this.digits, that.digits);
+        },
+
         isEqual : function(that){
             return (this.compare(that) === 0) ? 1 : 0;
         },
@@ -167,18 +183,49 @@
             return (this.compare(that) === -1) ? 1 : 0;
         },
 
-        compare : function(that){
+        // this + that
+        plus : function(that){
             if (this.isNegative !== that.isNegative){
-                return this.isNegative ? -1 : 1;
+                return (this.isNegative)
+                     ? that.minus(this.complement())
+                     : this.minus(that.complement());
             }
-            var result = this.compareDigits(that);
-            if (this.isNegative){
-                result = -result;
-            }
-            return result;
+            var isNegative   = this.isNegative,
+                resultDigits = _add(this.digits, that.digits);
+            return isNegative
+                 ? new BigInt('-' + resultDigits.join(''))
+                 : new BigInt(resultDigits.join(''));
         },
-        compareDigits : function(that){
-            return _compareArray(this.digits, that.digits);
+
+        // this - that
+        minus : function(that){
+            if (this.isNegative !== that.isNegative){
+                return this.plus(that.complement());
+            }
+            var compareResult       = this.compare(that),
+                compareDigitsResult = this.compareDigits(that);
+            if (compareResult === 0){
+                return new BigInt('0');
+            }
+            var isNegative   = (compareResult === 1) ? 0 : 1,
+                resultDigits = (compareDigitsResult === 1)
+                             ? _minus(this.digits, that.digits)
+                             : _minus(that.digits, this.digits);
+
+            return isNegative
+                 ? new BigInt('-' + resultDigits.join(''))
+                 : new BigInt(resultDigits.join(''));
+        },
+
+        // this * that
+        // TODO use faster algrithm, like FFT.
+        multiply : function(that){
+            var resultDigits = [],
+                isNegative   = (this.isNegative === that.isNegative) ? 0 : 1;
+            resultDigits = _multiply(this.digits, that.digits);
+            return isNegative
+                 ? new BigInt('-' + resultDigits.join(''))
+                 : new BigInt(resultDigits.join(''));
         },
 
         // this / that
@@ -209,47 +256,13 @@
                                             : new BigInt(result.remainderDigits.join(''))
             };
         },
-        // this - that
-        minus : function(that){
-            if (this.isNegative !== that.isNegative){
-                return this.plus(that.complement());
-            }
-            var compareResult       = this.compare(that),
-                compareDigitsResult = this.compareDigits(that);
-            if (compareResult === 0){
-                return new BigInt('0');
-            }
-            var isNegative   = (compareResult === 1) ? 0 : 1,
-                resultDigits = (compareDigitsResult === 1)
-                             ? _minus(this.digits, that.digits)
-                             : _minus(that.digits, this.digits);
-
-            return isNegative
-                 ? new BigInt('-' + resultDigits.join(''))
-                 : new BigInt(resultDigits.join(''));
+        quotient : function(that){
+            var result = this.divide(that);
+            return result.quotient;
         },
-        // this * that
-        // TODO use faster algrithm, like FFT.
-        multiply : function(that){
-            var resultDigits = [],
-                isNegative   = (this.isNegative === that.isNegative) ? 0 : 1;
-            resultDigits = _multiply(this.digits, that.digits);
-            return isNegative
-                 ? new BigInt('-' + resultDigits.join(''))
-                 : new BigInt(resultDigits.join(''));
-        },
-        // this + that
-        plus : function(that){
-            if (this.isNegative !== that.isNegative){
-                return (this.isNegative)
-                     ? that.minus(this.complement())
-                     : this.minus(that.complement());
-            }
-            var isNegative   = this.isNegative,
-                resultDigits = _add(this.digits, that.digits);
-            return isNegative
-                 ? new BigInt('-' + resultDigits.join(''))
-                 : new BigInt(resultDigits.join(''));
+        mod : function(that){
+            var result = this.divide(that);
+            return result.remainder;
         }
     };
 
