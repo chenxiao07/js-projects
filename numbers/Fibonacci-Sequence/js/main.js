@@ -4,6 +4,7 @@
             if (n < 0){
                 throw new Error('wrong length');
             }
+            // normal
             if (type === 1){
                 return fibonacciSequenceNonRecursion(n);
             }
@@ -42,7 +43,7 @@
                  + fibonacciSequenceRecursion(n - 2);
         }
 
-        document.getElementById('compute-nomal').addEventListener('click', function(){
+        document.getElementById('compute-normal').addEventListener('click', function(){
             var length = document.getElementById('length').value;
             document.getElementById('result').innerHTML = '';
             document.getElementById('result').innerHTML = (fibonacciSequence(length, 1).join(', '));
