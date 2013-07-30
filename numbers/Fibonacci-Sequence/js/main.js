@@ -1,5 +1,29 @@
 ;(function(){
     window.addEventListener('load', function(){
+        function fibonacciSequenceNonRecursion(n){
+            if (n === 0){
+                return [0];
+            }
+            if (n === 1){
+                return [0, 1];
+            }
+            var result = [0, 1], i;
+            for (i = 2; i <= n; i ++){
+                result.push(result[i - 1] + result[i - 2]);
+            }
+            return result;
+        }
+        function fibonacciSequenceRecursion(n){
+            if (n === 0){
+                return 0;
+            }
+            if (n === 1){
+                return 1;
+            }
+            return fibonacciSequenceRecursion(n - 1)
+                 + fibonacciSequenceRecursion(n - 2);
+        }
+
         function fibonacciSequence(n, type){
             if (n < 0){
                 throw new Error('wrong length');
@@ -16,31 +40,6 @@
                 return resultArray;
             }
             throw new Error('wrong type');
-        }
-
-        function fibonacciSequenceNonRecursion(n){
-            if (n === 0){
-                return [0];
-            }
-            if (n === 1){
-                return [0, 1];
-            }
-            var result = [0, 1], i;
-            for (i = 2; i <= n; i ++){
-                result.push(result[i - 1] + result[i - 2]);
-            }
-            return result;
-        }
-
-        function fibonacciSequenceRecursion(n){
-            if (n === 0){
-                return 0;
-            }
-            if (n === 1){
-                return 1;
-            }
-            return fibonacciSequenceRecursion(n - 1)
-                 + fibonacciSequenceRecursion(n - 2);
         }
 
         document.getElementById('compute-normal').addEventListener('click', function(){
