@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find out cost of tile to cover floor</title>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <table id="cost-calculate">
+            <tr>
+                <td>width</td>
+                <td><input id="width" type="number" placeholder="width of floor" value="10"/></td>
+                <td>feet</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td><input id="height" type="number" placeholder="height of floor" value="10"/></td>
+                <td>feet</td>
+            </tr>
+            <tr>
+                <td>cost</td>
+                <td><input id="cost" type="number" placeholder="cost per feet" value="1"/></td>
+                <td>cost per sq. feet</td>
+            </tr>
+        </table>
+        <button id="compute">compute</button>
+        <p>
+            for total area: 
+            <span id="total-area"></span>
+        </p>
+        <p>
+            total cost is: 
+            <span id="total-cost"></span>
+        </p>
+    </div>
+</body>
+</html>
+
