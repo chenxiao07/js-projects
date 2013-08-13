@@ -1,0 +1,28 @@
+
+body {
+    background-color : #FFF1CE;
+    height           : 100%;
+    font-family      : sans-serif;
+    padding-left     : 1em;
+    overflow         : hidden;
+}
+body.scroll {
+    overflow-y : auto;
+}
+
+div#controller {
+    position      : fixed;
+    float         : right;
+    right         : 0;
+    top           : 4em;
+    border-radius : 0.5em;
+    box-shadow    : 0 0 1px #a2a2a4;
+    opacity       : 0.9;
+}
+div#controller:hover {
+    opacity       : 1;
+}
+div#controller table {
+    margin: 0;
+}
+

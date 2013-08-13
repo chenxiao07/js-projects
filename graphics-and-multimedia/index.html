@@ -1,0 +1,16 @@
+---
+layout: base
+title: js-projects
+slug: graphics-and-multimedia
+base_url: "../"
+tags:
+  - sort: graphics-and-multimedia
+    links:
+      - clock.js
+      - sorting-visualization
+---
+
+{% for tag in page.tags %}
+    {% include accordion.html tag = tag %}
+{% endfor %}
+
