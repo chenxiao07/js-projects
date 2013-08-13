@@ -1,0 +1,11 @@
+# Dependencies
+markdown:         rdiscount
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Server
+destination:      ./_site
+port:             9001
+

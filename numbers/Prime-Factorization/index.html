@@ -1,18 +1,23 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>prime factorization</title>
-    <script type="text/javascript" src="js/main.js"></script>
-</head>
-<body>
-    <div id="container">
-        <input id="length" type="number" value="3"/>
-        <button id="compute">compute</button>
-        <p>
-            <textarea id="result" name="result" rows="5" cols="100"></textarea>
-        </p>
-    </div>
-</body>
-</html>
+---
+layout: base
+title: prime factorization
+slug: numbers
+base_url: "../../"
+---
 
+<div class="panel">
+    <div class="panel-heading">
+        prime factorization
+    </div>
+
+    <table class="table table-bordered">
+        <tr>
+            <td><input class="w100per" id="length" type="number" value="3"/></td>
+            <td><button class="btn btn-small btn-default btn-block" id="compute">compute!</button></td>
+        </tr>
+    </table>
+    <h4>result: </h4>
+    <h4><span class="label" id="result"></span></h4>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>

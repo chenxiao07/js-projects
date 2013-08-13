@@ -1,19 +1,38 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fibonacci Sequence</title>
-    <script type="text/javascript" src="js/main.js"></script>
-</head>
-<body>
-    <div id="container">
-        <input id="length" type="number" value="3"/>
-        <button id="compute-normal">normal compute</button>
-        <button id="compute-recursion">recursion compute</button>
-        <p>
-            <textarea id="result" name="result" rows="5" cols="100"></textarea>
-        </p>
-    </div>
-</body>
-</html>
+---
+layout: base
+title: Fibonacci Sequence
+slug: numbers
+base_url: "../../"
+---
 
+<div class="panel">
+    <div class="panel-heading">
+        Fibonacci Sequence
+    </div>
+
+    <form class="form-horizontal" onsubmit="return false;">
+        <div class="form-group">
+            <label for="length" class="control-label col-lg-2">length</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="length" type="number" value="3"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="operations" class="control-label col-lg-2">types</label>
+            <div id="operations" class="col-lg-10">
+                <button class="btn btn-block btn-default" id="compute-normal">normal compute</button>
+                <button class="btn btn-block btn-default" id="compute-recursion">recursion compute</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="result" class="control-label col-lg-2">result</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" id="result" name="result" rows="10"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>

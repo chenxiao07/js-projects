@@ -1,0 +1,22 @@
+---
+layout: base
+title: js-projects
+slug: numbers
+base_url: "../"
+tags:
+  - sort: numbers
+    links:
+      - bigint.js
+      - change-return
+      - cost-of-tile
+      - fibonacci-sequence
+      - mortgage-calculator
+      - next-prime-number
+      - pi-to-nth-digit
+      - prime-factorization
+---
+
+{% for tag in page.tags %}
+    {% include accordion.html tag = tag %}
+{% endfor %}
+

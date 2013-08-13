@@ -1,0 +1,20 @@
+
+<div class="accordion" id="{{ include.tag.sort }}">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#{{ include.tag.sort }}" href="#{{ include.tag.sort }}-content">
+                {{ tag.sort }}
+            </a>
+        </div> <!-- div.accordion-heading -->
+        <div id="{{ include.tag.sort }}-content" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                {% for link in include.tag.links %}
+                <a href="{{ page.base_url }}{{ include.tag.sort }}/{{ link }}" class="btn btn-block btn-default">
+                    {{ link }}
+                </a>
+                {% endfor %}
+            </div>
+        </div> <!-- div.accordion-body -->
+    </div> <!-- div.accordion-group -->
+</div> <!-- div.accordion -->
+

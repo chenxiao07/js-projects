@@ -1,19 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>next prime number</title>
-    <script type="text/javascript" src="js/main.js"></script>
-</head>
-<body>
-    <div id="container">
-        <button id="start">start</button>
-        <button id="pause">pause</button>
-        <button id="stop">stop</button>
-        <p>
-            <textarea id="result" name="result" rows="5" cols="100"></textarea>
-        </p>
-    </div>
-</body>
-</html>
+---
+layout: base
+title: next prime number
+slug: numbers
+base_url: "../../"
+---
 
+<div class="panel">
+    <div class="panel-heading">
+        next prime number
+    </div>
+
+    <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" id="start">start</a>
+        <a class="btn btn-default" id="pause">pause</a>
+        <a class="btn btn-default" id="stop">stop</a>
+    </div>
+    <h4>result: </h4>
+    <h4><span class="label" id="result"></span></h4>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
