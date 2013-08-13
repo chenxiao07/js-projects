@@ -27,7 +27,7 @@
             q = q.quotient(new BigInt(String(2 * i - 1)));
             s = (i % 2 === 1) ? s.plus(q) : s.minus(q);
         }
-        return s.digits[0] + '.' + s.digits.slice(1).join('');
+        return s.digits[0] + '.' + s.digits.slice(1).join(' ');
     };
 
     exports.LongPI = LongPI;

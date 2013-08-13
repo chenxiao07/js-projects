@@ -9,8 +9,8 @@
             var totalArea = width * height,
                 totalCost = cost  * totalArea;
 
-            document.getElementById('total-area').innerHTML = totalArea;
-            document.getElementById('total-cost').innerHTML = totalCost;
+            document.getElementById('total-area').value = totalArea;
+            document.getElementById('total-cost').value = totalCost;
         });
     });
 
