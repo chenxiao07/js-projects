@@ -9,14 +9,14 @@
         }
         for (amount in money){
             if (money.hasOwnProperty(amount)){
-                totalMoneyAmount += amount * money.amount;
+                totalMoneyAmount += amount * money[amount];
             }
         }
         return totalMoneyAmount;
     }
     function _planToTakeOffChange(amount, money){
         var plan    = {},
-            amounts = Object.keys(money).sort().reverse(),
+            amounts = Object.keys(money).sort(function(a,b){return a-b;}).reverse(),
             i, j;
         for (i = 0; i < amounts.length; i ++){
             plan[amounts[i]] = 0;
@@ -33,15 +33,16 @@
         return undefined;
     }
     function _mergeMoney(money1, money2){
-        var amount, total = {};
+        var amount, total = {}, temp;
         for (amount in money1){
             if (money1.hasOwnProperty(amount)){
-                total.amount = money1 + (money2.amount || 0);
+                temp = money2[amount] || 0;
+                total[amount] = parseInt(money1[amount], 10) + parseInt(temp, 10);
             }
         }
         for (amount in money2){
             if (money2.hasOwnProperty(amount) && !total.hasOwnProperty(amount)){
-                total.amount = money2.amount;
+                total[amount] = parseInt(money2[amount], 10);
             }
         }
         return total;
@@ -53,7 +54,7 @@
     };
     ChangeGiver.prototype = {
         init : function(money, nameForAmounts){
-            if (this.validateMoneyAmounts(money)){
+            if (this.validateMoneyAmounts(money) === 1){
                 this.availableMoney = money;
                 this.nameForAmounts = nameForAmounts;
             } else {
@@ -75,7 +76,7 @@
             for (amount in money){
                 if (money.hasOwnProperty(amount)){
                     if (this.availableMoney.hasOwnProperty(amount)){
-                        if (this.availableMoney.amount < money.amount){
+                        if (this.availableMoney[amount] < money[amount]){
                             throw new Error('ChangeGiver Error: do not have enough money of this amount: ' + amount);
                         }
                     } else {
@@ -86,7 +87,7 @@
             for (amount in money){
                 if (money.hasOwnProperty(amount)){
                     if (this.availableMoney.hasOwnProperty(amount)){
-                        this.availableMoney.amount -= money.amount;
+                        this.availableMoney[amount] -= money[amount];
                     }
                 }
             }
@@ -96,24 +97,24 @@
             this.availableMoney = _mergeMoney(this.availableMoney, money);
         },
         getChangePlan : function(price, paid){
-            var changeAmount = price - _totalMoneyAmount(paid);
+            var changeAmount = _totalMoneyAmount(paid) - price;
             if (changeAmount < 0){
                 throw new Error('ChangeGiver Error: paid money amount is not enough');
             } else if (changeAmount === 0){
                 throw new Error('ChangeGiver Error: do not need to get change');
-            } else if (changeAmount > this.totalMoneyAmount){
+            } else if (changeAmount > this.totalMoneyAmount()){
                 throw new Error('ChangeGiver Error: do not have enough money');
             } else {
                 var totalAvailableMoney = _mergeMoney(this.availableMoney, paid);
                 var plan = _planToTakeOffChange(changeAmount, totalAvailableMoney);
                 if (plan === undefined){
-                    throw new Error('ChangeGiver Error: do not have enough money');
+                    throw new Error('ChangeGiver Error: get plan failed: might be caused by lack of change');
                 }
                 return plan;
             }
         },
         stringifyMoney : function(money){
-            var amounts   = Object.keys(money).sort().reverse(),
+            var amounts   = Object.keys(money).sort(function(a,b){return a-b;}).reverse(),
                 resultStr = '',
                 i, amountName;
             for (i = 0; i < amounts.length; i ++){
@@ -121,7 +122,11 @@
                 if (amountName === undefined){
                     resultStr += 'undefined: ' + amounts[i] * money[amounts[i]] + '\n';
                 } else {
-                    resultStr += amountName + ': ' + money[amounts[i]] + '\n';
+                    resultStr += '<span class="label label-info margin1">'
+                               + amountName
+                               + ': '
+                               + money[amounts[i]]
+                               + '</span>';
                 }
             }
             return resultStr;
@@ -130,7 +135,7 @@
             var amount;
             for (amount in money){
                 if (money.hasOwnProperty(amount)){
-                    if (money.amount < 0){
+                    if (money[amount] < 0){
                         return 0;
                     }
                 }

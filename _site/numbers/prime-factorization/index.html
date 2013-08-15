@@ -83,14 +83,30 @@
 
             </ul>
 
-            <ul class="nav navbar-nav pull-right permission-4">
+            <ul class="nav navbar-nav pull-right">
                 <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        tool
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a id="show-modal-log" href="#modal-log" data-toggle="modal">
+                                log
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown permission-4">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img class="nav-icon img-rounded" src="http://www.gravatar.com/avatar/800427317aa5d4e81ce1bca5a202ae0f.png" alt="" />
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a target="_black" href="https://github.com/leungwensen/js-projects">fork on github</a></li>
+                        <li><a target="_black" href="https://github.com/leungwensen/js-projects">Fork me on GitHub</a></li>
+                        <li class="divider"></li>
+                        <li><a target="_black" href="http://getbootstrap.com/">styled by Bootstrap3</a></li>
+                        <li><a target="_black" href="http://jekyllrb.com/">powered by jekyll</a></li>
                     </ul>
                 </li>
             </ul>
@@ -127,9 +143,31 @@
 
         <!-- JS and analytics only. -->
         
+<footer>
+    <div class="modal fade" id="modal-log">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">log</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-log-content">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</footer>
+
 <!-- bootstrap -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+<script src="../../js/logger.js"></script>
+<script src="../../js/validator.js"></script>
 
 <!-- Analytics -->
 <script>
