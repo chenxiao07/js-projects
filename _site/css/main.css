@@ -15,6 +15,9 @@
     width  : 36px          ;
     height : 36px          ;
 }
+.dropdown-menu li div#___plus_0 {
+    max-width: 50px;
+}
 
 /* elements
  */

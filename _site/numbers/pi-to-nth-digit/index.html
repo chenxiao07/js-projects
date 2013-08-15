@@ -84,19 +84,6 @@
             </ul>
 
             <ul class="nav navbar-nav pull-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        tool
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a id="show-modal-log" href="#modal-log" data-toggle="modal">
-                                log
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="dropdown permission-4">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img class="nav-icon img-rounded" src="http://www.gravatar.com/avatar/800427317aa5d4e81ce1bca5a202ae0f.png" alt="" />
@@ -105,8 +92,64 @@
                     <ul class="dropdown-menu">
                         <li><a target="_black" href="https://github.com/leungwensen/js-projects">Fork me on GitHub</a></li>
                         <li class="divider"></li>
+                        <li>
+                            <a href="https://twitter.com/intent/tweet?button_hashtag=js-projects&text=javascript%20projects!"
+                               class="twitter-hashtag-button" data-related="leungwensen"
+                               data-url="http://leungwensen.github.io/js-projects/">
+                               Tweet #js-projects
+                            </a>
+                            <div class="g-plus" data-action="share"></div>
+                            <div class="fb-like" data-width="50" data-show-faces="true" data-send="true"
+                                 data-href="http://leungwensen.github.io/js-projects/">
+                            </div>
+
+                            <script type="text/javascript" src="http://widget.renren.com/js/rrshare.js"></script>
+                            <div class="renren-share" style="display: inline" name="xn_share" onclick="shareClick()" type="icon" href="javascript:;"></div>
+                            <script type="text/javascript">
+                                function shareClick() {
+                                    var rrShareParam = {
+                                        resourceUrl:location.href,
+                                        srcUrl:'',//分享的资源来源Url,默认为header中的Referer,如果分享失败可以调整此值为resourceUrl试试
+                                        pic:'',   //分享的主题图片Url
+                                        title:'javascript projects',    //分享的标题
+                                        description:'by leungwensen'    //分享的详细描述
+                                    };
+                                    rrShareOnclick(rrShareParam);
+                                }
+                            </script>
+
+                            <script type="text/javascript" charset="utf-8">
+                                (function(){
+                                    var _w = 72 , _h = 16;
+                                    var param = {
+                                        url:location.href,
+                                        type:'3',
+                                        count:'1', /**是否显示分享数，1显示(可选)*/
+                                        appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+                                        title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+                                        pic:'', /**分享图片的路径(可选)*/
+                                        ralateUid:'1846799332', /**关联用户的UID，分享微博会@该用户(可选)*/
+                                        language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+                                        dpc:1
+                                    };
+                                    var temp = [];
+                                    for( var p in param ){
+                                        temp.push(p + '=' + encodeURIComponent( param[p] || '' ) );
+                                    }
+                                    document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://service.weibo.com/staticjs/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>');
+                                })()
+                            </script>
+
+                        </li>
+                        <li class="divider"></li>
                         <li><a target="_black" href="http://getbootstrap.com/">styled by Bootstrap3</a></li>
                         <li><a target="_black" href="http://jekyllrb.com/">powered by jekyll</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a id="show-modal-log" href="#modal-log" data-toggle="modal">
+                                log
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -146,23 +189,23 @@
         <!-- JS and analytics only. -->
         
 <footer>
-    <div class="modal fade" id="modal-log">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">log</h4>
+<div class="modal fade" id="modal-log">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">log</h4>
+            </div>
+            <div class="modal-body">
+                <div id="modal-log-content">
                 </div>
-                <div class="modal-body">
-                    <div id="modal-log-content">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </footer>
 
 <!-- bootstrap -->
@@ -186,6 +229,42 @@
     ga('create', 'UA-34157798-2', 'leungwensen.github.io');
     ga('send', 'pageview');
 </script>
+
+<!-- facebook -->
+<div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_CN/all.js#xfbml=1&appId=502246906455468";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- twitter -->
+<script>
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src=p+'://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js,fjs);
+        }
+    }(document, 'script', 'twitter-wjs');
+</script>
+<!-- google+ -->
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+     })();
+</script>
+
 
 
     </body>
