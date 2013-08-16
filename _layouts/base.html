@@ -521,7 +521,10 @@ tags:
 
     <script type="text/javascript">
         $(function (){
-            $('.btn-popover').popover();
+            $('.btn-popover').on('click', function(){
+                RSLoader.load($(this).data('content'), $(this).data('title'));
+                RSLoader.show();
+            });
         });
     </script>
 
