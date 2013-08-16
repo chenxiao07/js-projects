@@ -1,0 +1,31 @@
+---
+layout: base
+title: threading in js-projects
+slug: advanced
+base_url: "../"
+tags:
+  - category: advanced
+    contents:
+      - sort: threading
+        is_collapsed: 0
+        links:
+          - name: bulk-thumbnail-creator
+            is_finished: 0
+            description: Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program which can take hundreds of images and convert them to a specified size in the background thread while you do other things. For added complexity, have one thread handling resizing, have another bulk renaming of thumbnails etc.
+          - name: chat-app-remoting
+            is_finished: 0
+            description: Create a chat application which allows you to connect directly to another com- puter by their IP through the use of remoting and allow your server application handle multiple incoming connections.
+          - name: download-manager
+            is_finished: 0
+            description: Allow your program to download various files and each one is downloading in the background on a separate thread. The main thread will keep track of the other threads progress and notify the user when downloads are completed.
+          - name: progress-bar-of-download
+            is_finished: 0
+            description: Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.
+---
+
+{% for cat in page.tags %}
+    {% for tag in cat.contents %}
+        {% include accordion.html tag = tag %}
+    {% endfor %}
+{% endfor %}
+
