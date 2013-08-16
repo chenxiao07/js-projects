@@ -13,7 +13,7 @@
                     <tr>
                         <td>
                             <a href="{{ page.base_url }}{{ include.tag.sort }}/{{ link.name }}" class="btn btn-block btn-default" title="{{ link.description }}" {% if link.is_finished == 0 %} disabled {% endif %}>
-                                {{ link.name }}
+                                <span class="limit-len len12">{{ link.name }}</span>
                             </a>
                         </td>
                         <td>
