@@ -6,13 +6,29 @@
                 {{ tag.sort }}
             </a>
         </div> <!-- div.accordion-heading -->
-        <div id="{{ include.tag.sort }}-content" class="accordion-body collapse in">
+        <div id="{{ include.tag.sort }}-content" class="accordion-body collapse {% if include.tag.is_collapsed == 0 %} in {% endif %}">
             <div class="accordion-inner">
-                {% for link in include.tag.links %}
-                <a href="{{ page.base_url }}{{ include.tag.sort }}/{{ link }}" class="btn btn-block btn-default">
-                    {{ link }}
-                </a>
-                {% endfor %}
+                <table class="table table-bordered">
+                    {% for link in include.tag.links %}
+                    <tr>
+                        <td>
+                            <a href="{{ page.base_url }}{{ include.tag.sort }}/{{ link.name }}" class="btn btn-block btn-default" title="{{ link.description }}" {% if link.is_finished == 0 %} disabled {% endif %}>
+                                {{ link.name }}
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-block btn-default btn-popover"
+                                data-container="body"
+                                data-placement="left"
+                                data-toggle="popover"
+                                data-content="{{ link.description }}"
+                                data-original-title="{{ link.name }}">
+                                description
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div> <!-- div.accordion-body -->
     </div> <!-- div.accordion-group -->

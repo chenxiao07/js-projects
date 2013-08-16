@@ -10,18 +10,21 @@
         <nav class="nav-collapse collapse">
             <ul class="nav navbar-nav">
 
-                {% for tag in include.tags %}
-                <li class="dropdown {% if page.slug == tag.sort %}active{% endif %}">
+                {% for cat in include.tags %}
+                <li class="dropdown {% if page.slug == cat.category %}active{% endif %}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        {{ tag.sort }}
+                        <span>{{ cat.category }}</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ page.base_url }}{{ tag.sort }}">list</a></li>
-                        <li class="divider"></li>
+                    {% for tag in cat.contents %}
+                        <li><a href="{{ page.base_url }}{{ tag.sort }}">{{ tag.sort }}</a></li>
+                        <!--
                         {% for link in tag.links %}
-                        <li><a href="{{ page.base_url }}{{ tag.sort }}/{{ link }}">{{ link }}</a></li>
+                        <li><a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}">{{ link.name }}</a></li>
                         {% endfor %}
+                        -->
+                    {% endfor %}
                     </ul>
                 </li>
                 {% endfor %}

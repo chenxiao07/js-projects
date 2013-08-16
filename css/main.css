@@ -5,7 +5,6 @@
 #main {
     margin-top : 70px;
     overflow   : scroll;
-    min-width  : 360px;
 }
 .navbar-fixed-top {
     margin-bottom: 0px;
@@ -55,6 +54,8 @@
 .minz-index { z-index: 0   ; }
 .maxz-index { z-index: 1500; }
 /* length */
+.len3  { max-width: 3em ; }
+.len4  { max-width: 4em ; }
 .len5  { max-width: 5em ; }
 .len7  { max-width: 7em ; }
 .len9  { max-width: 9em ; }
