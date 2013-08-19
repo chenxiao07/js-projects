@@ -112,6 +112,8 @@
 }
 .bg-color-success:hover {
     color            : #ffffff;
+    background-color : #4cae4c;
+    border-color     : #449d44;
 }
 
 /* border radius */
