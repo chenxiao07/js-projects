@@ -17,6 +17,17 @@
 .dropdown-menu li div#___plus_0 {
     max-width: 50px;
 }
+.list-group-item {
+    padding: 10px 15px;
+}
+.bg-color-primary > .badge {
+    color: #428bca;
+    background-color: #ffffff;
+}
+.bg-color-success > .badge {
+    color: #5cb85c;
+    background-color: #ffffff;
+}
 
 /* elements
  */
@@ -81,9 +92,31 @@
 .color-f00 { color: #f00;}
 .color-efe { color: #efe;}
 /* background-color */
-.bg-color-d   { background-color: #ddd;}
-.bg-color-fee { background-color: #fee;}
-.bg-color-efe { background-color: #efe;}
+.bg-color-d   { background-color: #ddd; }
+.bg-color-f   { background-color: #fff; }
+.bg-color-fee { background-color: #fee; }
+.bg-color-efe { background-color: #efe; }
+
+.bg-color-primary {
+    background-color : #428bca;
+    border-color     : #428bca;
+    color            : #ffffff;
+}
+.bg-color-primary:hover {
+    color            : #ffffff;
+}
+.bg-color-success {
+    background-color : #5cb85c;
+    border-color     : #5cb85c;
+    color            : #ffffff;
+}
+.bg-color-success:hover {
+    color            : #ffffff;
+}
+
+/* border radius */
+.border-r-1  { border-radius: 1em  }
+.border-r-05 { border-radius: .5em }
 
 .permission-0,
 .permission-1,

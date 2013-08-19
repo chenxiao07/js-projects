@@ -1,24 +1,26 @@
 
-<div class="accordion" id="{{ include.tag.sort }}">
+<div class="accordion bg-color-f border-r-05" id="{{ tag.sort }}">
     <div class="accordion-group">
         <div class="accordion-heading">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#{{ include.tag.sort }}" href="#{{ include.tag.sort }}-content">
+            <a data-toggle="collapse" data-parent="#{{ tag.sort }}" href="#{{ tag.sort }}-content"
+                class="accordion-toggle {% if tag.finished_amount > 0 %} bg-color-success {% endif %}" >
                 {{ tag.sort }}
                 <span class="badge float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
             </a>
         </div> <!-- div.accordion-heading -->
-        <div id="{{ include.tag.sort }}-content" class="accordion-body collapse {% if include.tag.is_collapsed == 0 %} in {% endif %}">
+        <div id="{{ tag.sort }}-content" class="accordion-body collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
             <div class="accordion-inner">
                 <table class="table table-bordered">
-                    {% for link in include.tag.links %}
+                    {% for link in tag.links %}
                     <tr>
                         <td>
-                            <a href="{{ page.base_url }}{{ include.tag.sort }}/{{ link.name }}" class="btn btn-block btn-default" title="{{ link.description }}" {% if link.is_finished == 0 %} disabled {% endif %}>
+                            <a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}" title="{{ link.description }}"
+                                class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}>
                                 <span class="limit-len len12">{{ link.name }}</span>
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-block btn-default btn-popover" data-content="{{ link.description }}" data-title="{{ link.name }}">
+                            <button type="button" class="btn btn-block btn-link btn-popover" data-content="{{ link.description }}" data-title="{{ link.name }}">
                                 description
                             </button>
                         </td>

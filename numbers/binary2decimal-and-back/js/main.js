@@ -5,7 +5,7 @@
             binaryInt = $('#input-binary').val();
             try {
                 result = RadixConvertor.NRadix2decimal(binaryInt, 2);
-                $('#result').text('binary int: ' + binaryInt + ' to decimal int: ' + result);
+                $('#result').html('binary int: <br>' + binaryInt + '<br> to decimal int: <br>' + result);
             } catch(err) {
                 Logger.log(err, 'alert-danger');
                 Logger.show();
@@ -15,7 +15,7 @@
             decimalInt = $('#input-decimal').val();
             try {
                 result = RadixConvertor.decimal2NRadix(decimalInt, 2);
-                $('#result').text('decimal int: ' + decimalInt + ' to binary int: ' + result);
+                $('#result').html('decimal int: <br>' + decimalInt + '<br> to binary int: <br>' + result);
             } catch(err) {
                 Logger.log(err, 'alert-danger');
                 Logger.show();

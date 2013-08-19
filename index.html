@@ -520,9 +520,16 @@ tags:
             description: A simple game of tic tac toe. For added complexity allow the application to be played over the internet where another player can against you.
 ---
 
+<div class="list-group">
 {% for cat in page.tags %}
+    <div class="list-group-item">
+        <h4><span class="label">{{ cat.category }}</span></h4>
+
     {% for tag in cat.contents %}
         {% include accordion.html tag = tag %}
     {% endfor %}
+
+    </div>
 {% endfor %}
+</div>
 
