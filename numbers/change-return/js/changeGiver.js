@@ -122,11 +122,11 @@
                 if (amountName === undefined){
                     resultStr += 'undefined: ' + amounts[i] * money[amounts[i]] + '\n';
                 } else {
-                    resultStr += '<span class="label label-info margin1">'
+                    resultStr += '  ['
                                + amountName
                                + ': '
                                + money[amounts[i]]
-                               + '</span>';
+                               + ']  ';
                 }
             }
             return resultStr;
