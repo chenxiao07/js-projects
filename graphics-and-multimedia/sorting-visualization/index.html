@@ -8,24 +8,20 @@ base_url: "../../"
 <link rel="stylesheet" href="css/main.css" />
 <div id="controller">
     <table class="table table-bordered table-condensed">
-        <tr class="success">
-            <td>length</td>
-            <td>is pre-sorted</td>
-            <td>interval(ms)</td>
-            <td>method</td>
-            <td>operation</td>
+        <tr class="active">
+            <td>interval</td>
+            <td>
+                <input class="w100per" id="interval-time" type="number" min="10" max="2000" placeholder="interval" value="50"/>
+            </td>
         </tr>
         <tr class="active">
+            <td>length</td>
             <td>
-                <input id="array-length" type="number" min="5" max="200" placeholder="length" value="10"/>
+                <input class="w100per" id="array-length" type="number" min="5" max="200" placeholder="length" value="10"/>
             </td>
-            <td>
-                <input name="is-pre-sorted" type="radio" value="1"/> Y
-                <input name="is-pre-sorted" type="radio" value="0" checked/> N
-            </td>
-            <td>
-                <input id="interval-time" type="number" min="10" max="2000" placeholder="interval" value="50"/>
-            </td>
+        </tr>
+        <tr class="active">
+            <td>method</td>
             <td>
                 <select id="method" name="method">
                     <option value="bogo" selected>bogo</option>
@@ -44,12 +40,19 @@ base_url: "../../"
                     <option value="shell">shell</option>
                 </select>
             </td>
+        </tr>
+        <tr class="active">
+            <td>sorted</td>
             <td>
-                <div class="btn-group">
-                    <a class="btn btn-small btn-primary" id="init">init</a>
-                    <a class="btn btn-small btn-success" id="start">start</a>
-                    <a class="btn btn-small btn-warning" id="pause">pause</a>
-                </div>
+                <input name="is-pre-sorted" type="radio" value="1"/> Y
+                <input name="is-pre-sorted" type="radio" value="0" checked/> N
+            </td>
+        </tr>
+        <tr class="active">
+            <td colspan="2">
+                <a class="btn btn-block btn-small btn-primary" id="init">init</a>
+                <a class="btn btn-block btn-small btn-success" id="start">start</a>
+                <a class="btn btn-block btn-small btn-warning" id="pause">pause</a>
             </td>
         </tr>
     </table>
