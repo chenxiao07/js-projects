@@ -7,6 +7,9 @@
         isNegative : function(value){
             return (value < 0);
         },
+        isBinaryInt : function(value){
+            return (!isNaN(parseInt(value, 2)) && isFinite(value));
+        },
         isNotNull : function(value){
             if (value !== undefined){
                 value = value.replace(/(^\s*)|(\s*$)/g, '');
