@@ -4,6 +4,7 @@
         <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#{{ include.tag.sort }}" href="#{{ include.tag.sort }}-content">
                 {{ tag.sort }}
+                <span class="badge float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
             </a>
         </div> <!-- div.accordion-heading -->
         <div id="{{ include.tag.sort }}-content" class="accordion-body collapse {% if include.tag.is_collapsed == 0 %} in {% endif %}">
