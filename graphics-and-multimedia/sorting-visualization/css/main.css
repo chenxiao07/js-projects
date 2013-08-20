@@ -3,7 +3,6 @@ body {
     background-color : #FFF1CE;
     height           : 100%;
     font-family      : sans-serif;
-    padding-left     : 1em;
     overflow         : hidden;
 }
 body.scroll {

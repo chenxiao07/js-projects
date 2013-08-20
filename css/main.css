@@ -3,11 +3,10 @@
  */
 /* bootstrap */
 #main {
-    margin-top : 70px;
     overflow   : scroll;
 }
-.navbar-fixed-top {
-    margin-bottom: 0px;
+header.navbar {
+    margin-bottom: 15px;
 }
 .nav-icon {
     margin : -8px 0 -8px 0 ;
