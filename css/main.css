@@ -2,9 +2,6 @@
 /* plugins & frameworks ajustment
  */
 /* bootstrap */
-#main {
-    overflow   : scroll;
-}
 header.navbar {
     margin-bottom: 15px;
 }
