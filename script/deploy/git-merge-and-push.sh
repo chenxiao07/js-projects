@@ -10,3 +10,4 @@ git merge master
 git push github gh-pages
 
 git checkout dev
+git push github dev
