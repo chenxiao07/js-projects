@@ -4,14 +4,10 @@ git=$(which git)
 sed=$(which sed)
 
 current_branch=$($git branch | $sed -n '/\* /s///p')
-echo $current_branch
 develop_branch='dev'
-echo $develop_branch
 
 remotes=(origin github)
-echo ${remotes[@]}
 deploy_branches=(master gh-pages $current_branch $develop_branch)
-echo ${deploy_branches[@]}
 
 function main {
     echo "DEBUG: merge $current_branch into $develop_branch"
@@ -24,7 +20,13 @@ function main {
         $git merge    $develop_branch
         for remote in $remotes; do
             echo "DEBUG: deploying $branch to remote: $remote"
-            $git push $remote $branch
+            command="$git push $remote $branch"
+            $command 2>/dev/null
+            if (( $? == 0 )); then
+                echo "DEBUG: done deploying $branch to remote: $remote"
+            else
+                echo "DEBUG: failed deploying $branch to remote: $remote"
+            fi
         done
     done
     echo 'DEBUG: done deploying'
