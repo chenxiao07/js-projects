@@ -14,16 +14,13 @@ function main {
     $git checkout $develop_branch
     $git merge    $current_branch
 
-    # then deploy changes to targe branches
-    for branch in $deploy_branches
-    do
+    for branch in $deploy_branches; do
         echo "DEBUG: deploying $branch"
         $git checkout $branch
         $git merge    $develop_branch
-        for remote in $remotes
-        do
+        for remote in $remotes; do
             echo "DEBUG: deploying $branch to remote: $remote"
-            $git push $remote $branch 2>/dev/null
+            $git push $remote $branch 2&1>/dev/null
         done
     done
     echo 'DEBUG: done deploying'
