@@ -3,11 +3,11 @@
 GIT=$(which git)
 SED=$(which sed)
 
-REMOTES=("origin", "github")
-
 CURRENT_BRANCH="$GIT branch | $SED -n '/\* /s///p'"
 DEVELOP_BRANCH="dev"
-DEPLOY_BRANCHES=("master", "gh-pages", $CURRENT_BRANCH, "dev")
+
+REMOTES=$("origin", "github")
+DEPLOY_BRANCHES=$("master", "gh-pages", $CURRENT_BRANCH, "dev")
 
 function main {
     # first merge current chagnes into develop branch
