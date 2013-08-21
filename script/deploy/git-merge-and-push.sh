@@ -11,15 +11,14 @@ DEPLOY_BRANCHES=("master", "gh-pages", $CURRENT_BRANCH, "dev")
 
 function main {
     # first merge current chagnes into develop branch
-    $GIT merge    $DEVELOPE_BRANCH
-    $GIT checkout $DEVELOPE_BRANCH
+    $GIT checkout $DEVELOP_BRANCH
     $GIT merge    $CURRENT_BRANCH
 
     # then deploy changes to targe branches
     for br in $DEPLOY_BRANCHES
     do
         $GIT checkout $br
-        $GIT merge    $DEVELOPE_BRANCH
+        $GIT merge    $DEVELOP_BRANCH
         for remote in $REMOTES
         do
             $GIT push $remote $br
