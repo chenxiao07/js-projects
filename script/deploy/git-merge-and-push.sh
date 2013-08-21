@@ -1,30 +1,38 @@
 #!/usr/bin/env sh
 
-GIT=$(which git)
-SED=$(which sed)
+git=$(which git)
+sed=$(which sed)
 
-CURRENT_BRANCH="$GIT branch | $SED -n '/\* /s///p'"
-DEVELOP_BRANCH="dev"
+current_branch=$($git branch | $sed -n '/\* /s///p')
+develop_branch='dev'
 
-REMOTES=$("origin", "github")
-DEPLOY_BRANCHES=$("master", "gh-pages", $CURRENT_BRANCH, "dev")
+remotes=(
+        'origin'
+        'github'
+    )
+deploy_branches=(
+        'master'
+        'gh-pages'
+        $current_branch
+        $develop_branch
+    )
 
 function main {
     # first merge current chagnes into develop branch
-    $GIT checkout $DEVELOP_BRANCH
-    $GIT merge    $CURRENT_BRANCH
+    $git checkout $develop_branch
+    $git merge    $current_branch
 
     # then deploy changes to targe branches
-    for br in $DEPLOY_BRANCHES
+    for br in $deploy_branches
     do
-        $GIT checkout $br
-        $GIT merge    $DEVELOP_BRANCH
-        for remote in $REMOTES
+        $git checkout $br
+        $git merge    $develop_branch
+        for remote in $remotes
         do
-            $GIT push $remote $br
+            $git push $remote $br
         done
     done
-    echo "done deploying"
+    echo 'done deploying'
 }
 
 main
