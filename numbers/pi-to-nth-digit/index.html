@@ -7,19 +7,19 @@ extra_desc: Enter a number and have the program generate PI up to that many deci
 extra_keywords: pi nth generate
 ---
 
-<div class="panel">
-    <div class="panel-heading">
-        find out Nth digits of PI
-    </div>
+<div class="panel panel-default">
+    <div class="panel-heading">find out Nth digits of PI</div>
 
-    <table class="table table-bordered">
-        <tr>
-            <td><input class="w100per" id="length" type="number" value="3"/></td>
-            <td><button class="btn btn-small btn-default btn-block" id="compute">compute!</button></td>
-        </tr>
-    </table>
-    <h4>result: </h4>
-    <div id="result" class="alert alert-info"></div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td><input class="w100per" id="length" type="number" value="3"/></td>
+                <td><button class="btn btn-small btn-primary btn-block" id="compute">compute!</button></td>
+            </tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
 </div>
 
 <script src="{{ page.base_url }}numbers/bigint.js/js/bigInt.js"></script>

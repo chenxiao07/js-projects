@@ -1,74 +1,57 @@
 
-<header class="navbar navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+<header class="navbar navbar-default" role="banner">
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="{{ page.base_url }}" class="navbar-brand {% if page.slug == 'numbers' %}active{% endif %}">js-projects</a>
-        <nav class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-
-                {% for cat in include.tags %}
-                <li class="dropdown {% if page.slug == cat.category %}active{% endif %}">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span>{{ cat.category }}</span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                    {% for tag in cat.contents %}
-                        <li><a href="{{ page.base_url }}{{ tag.sort }}">{{ tag.sort }}</a></li>
-                    {% endfor %}
-                    </ul>
-                </li>
-                {% endfor %}
-
-            </ul>
-
-            <ul class="nav navbar-nav pull-right">
-                <li class="dropdown permission-4">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img class="nav-icon img-rounded" src="http://www.gravatar.com/avatar/800427317aa5d4e81ce1bca5a202ae0f.png" alt="" />
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a target="_black" href="https://github.com/leungwensen/js-projects">Fork me on GitHub</a></li>
-                        <li class="divider"></li>
-                        <li>
-
-                            <!-- social -->
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"
-                                data-url="http://leungwensen.github.io/js-projects/">
-                                Tweet
-                            </a>
-                            <div class="g-plusone" data-size="medium" data-count="true"
-                                data-href="http://leungwensen.github.io/js-projects/">
-                            </div>
-                            <div id="fb-root"></div>
-                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false"
-                                data-href="http://leungwensen.github.io/js-projects/">
-                            </div>
-                            <!-- end social -->
-
-                        </li>
-                        <li class="divider"></li>
-                        <li><a target="_black" href="http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/">Martyr2’s Mega Project List</a></li>
-                        <li><a target="_black" href="http://getbootstrap.com/">styled by Bootstrap3</a></li>
-                        <li><a target="_black" href="http://jekyllrb.com/">powered by jekyll</a></li>
-                        <li class="divider"></li>
-                        <li>
-                            <a id="show-modal-log" href="#modal-log" data-toggle="modal">
-                                log
-                            </a>
-                            <a id="show-modal-resource" href="#modal-resource" data-toggle="modal">
-                                resource
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <a href="{{ page.base_url }}" class="navbar-brand {% if page.slug == 'homepage' %}active{% endif %}">js-projects</a>
     </div>
+    <nav class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            {% for cat in include.tags %}
+            <li class="dropdown {% if page.slug == cat.category %}active{% endif %}">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span>{{ cat.category }}</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                {% for tag in cat.contents %}
+                <li><a href="{{ page.base_url }}{{ tag.sort }}">{{ tag.sort }}</a></li>
+                {% endfor %}
+            </ul>
+            </li>
+            {% endfor %}
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img class="nav-icon img-rounded" src="http://www.gravatar.com/avatar/800427317aa5d4e81ce1bca5a202ae0f.png" alt="" />
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a target="_black" href="https://github.com/leungwensen/js-projects">Fork me on GitHub</a></li>
+                <li class="divider"></li>
+                <li>
+                <!-- social -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="http://leungwensen.github.io/js-projects/">Tweet</a>
+                <div class="g-plusone" data-size="medium" data-count="true" data-href="http://leungwensen.github.io/js-projects/"></div>
+                <div id="fb-root"></div>
+                <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false" data-href="http://leungwensen.github.io/js-projects/"></div>
+                <!-- end social -->
+                </li>
+                <li class="divider"></li>
+                <li><a target="_black" href="http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/">Martyr2’s Mega Project List</a></li>
+                <li><a target="_black" href="http://getbootstrap.com/">styled by Bootstrap3</a></li>
+                <li><a target="_black" href="http://jekyllrb.com/">powered by jekyll</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Copyright © leungwensen 2013</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
 </header>
 

@@ -5,54 +5,52 @@ slug: numbers
 title: mortgage calculator
 extra_desc: Calculate the monthly payments of a fixed term mortgage over given Nth terms at a given interest rate. Also figure out how long it will take the user to pay back the loan.
 extra_keywords: calculate mortgage loan
-
 ---
 
-<div class="panel">
-    <div class="panel-heading">
-        mortgage calculator
-    </div>
+<div class="panel panel-default">
+    <div class="panel-heading">mortgage calculator</div>
 
-    <div class="row">
-        <div id="mortgage-calculator" class="col-lg-6">
-            <h4>mortgage calculator</h4>
-            <table class="table table-bordered">
-                <tr>
-                    <td>principal</td>
-                    <td>interest rate</td>
-                    <td>count</td>
-                    <td>compute</td>
-                </tr>
-                <tr>
-                    <td><input class="w100per" id="mortgage-principal" type="number" value="500000"/></td>
-                    <td><input class="w100per" id="mortgage-interest-rate" type="number" value="0.05"/></td>
-                    <td><input class="w100per" id="mortgage-count" type="number" value="60"/></td>
-                    <td><button class="btn btn-block btn-small btn-default" id="mortgage-compute">compute</button></td>
-                </tr>
-            </table>
-            <table id="mortgage-result-monthly" class="table table-bordered">
-            </table>
+    <div class="panel-body">
+        <div class="row">
+            <div id="mortgage-calculator" class="col-lg-6">
+                <h4>mortgage calculator</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>principal</td>
+                        <td>interest rate</td>
+                        <td>count</td>
+                        <td>compute</td>
+                    </tr>
+                    <tr>
+                        <td><input class="w100per" id="mortgage-principal" type="number" value="500000"/></td>
+                        <td><input class="w100per" id="mortgage-interest-rate" type="number" value="0.05"/></td>
+                        <td><input class="w100per" id="mortgage-count" type="number" value="60"/></td>
+                        <td><button class="btn btn-block btn-small btn-primary" id="mortgage-compute">compute</button></td>
+                    </tr>
+                </table>
+                <table id="mortgage-result-monthly" class="table table-bordered">
+                </table>
+            </div>
+            <div id="loan-calculator" class="col-lg-6">
+                <h4>loan calculator</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>principal</td>
+                        <td>interest rate</td>
+                        <td>count</td>
+                        <td>compute</td>
+                    </tr>
+                    <tr>
+                        <td><input class="w100per" id="loan-principal" type="number" value="500000"/></td>
+                        <td><input class="w100per" id="loan-interest-rate" type="number" value="0.05"/></td>
+                        <td><input class="w100per" id="loan-count" type="number" value="60"/></td>
+                        <td><button class="btn btn-block btn-small btn-primary" id="loan-compute">compute</button></td>
+                    </tr>
+                </table>
+                <table id="loan-result-monthly" class="table table-bordered">
+                </table>
+            </div>
         </div>
-        <div id="loan-calculator" class="col-lg-6">
-            <h4>loan calculator</h4>
-            <table class="table table-bordered">
-                <tr>
-                    <td>principal</td>
-                    <td>interest rate</td>
-                    <td>count</td>
-                    <td>compute</td>
-                </tr>
-                <tr>
-                    <td><input class="w100per" id="loan-principal" type="number" value="500000"/></td>
-                    <td><input class="w100per" id="loan-interest-rate" type="number" value="0.05"/></td>
-                    <td><input class="w100per" id="loan-count" type="number" value="60"/></td>
-                    <td><button class="btn btn-block btn-small btn-default" id="loan-compute">compute</button></td>
-                </tr>
-            </table>
-            <table id="loan-result-monthly" class="table table-bordered">
-            </table>
-        </div>
-
     </div>
 </div>
 

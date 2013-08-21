@@ -1,28 +1,24 @@
 
-<div class="accordion bg-color-f border-r-05" id="{{ tag.sort }}">
-    <div class="accordion-group">
-        <div class="accordion-heading">
-            <a data-toggle="collapse" data-parent="#{{ tag.sort }}" href="#{{ tag.sort }}-content"
-                class="accordion-toggle {% if tag.finished_amount > 0 %} bg-color-success {% endif %}" >
+<div class="panel-group" id="{{ tag.sort }}">
+    <div class="panel {% if tag.finished_amount > 0 %} panel-success {% else %} panel-default {% endif %}">
+        <div class="panel-heading">
+            <a data-toggle="collapse" data-parent="#{{ tag.sort }}" href="#{{ tag.sort }}-content" class="accordion-toggle">
                 {{ tag.sort }}
-                <span class="badge float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
+                <span class="label {% if tag.finished_amount > 0 %} label-success {% else %} label-default {% endif %} float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
             </a>
         </div> <!-- div.accordion-heading -->
-        <div id="{{ tag.sort }}-content" class="accordion-body collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
+        <div id="{{ tag.sort }}-content" class="panel-collapse collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
             <div class="accordion-inner">
                 <table class="table table-bordered">
                     {% for link in tag.links %}
                     <tr>
                         <td>
-                            <a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}" title="{{ link.name }}"
-                                class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}>
+                            <a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}" title="{{ link.name }}" class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}>
                                 <span class="limit-len len12">{{ link.name }}</span>
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-block btn-link btn-popover" data-content="{{ link.description }}" data-title="{{ link.name }}">
-                                desc
-                            </button>
+                            <button type="button" class="btn btn-block btn-link btn-popover" data-content="{{ link.description }}" data-title="{{ link.name }}">desc</button>
                         </td>
                     </tr>
                     {% endfor %}

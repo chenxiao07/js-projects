@@ -7,38 +7,41 @@ extra_desc: Calculate the total cost of tile it would take to cover a floor plan
 extra_keywords: calculate cost tile
 ---
 
-<div class="panel">
-    <div class="panel-heading">
-        cost of tile
+<div class="panel panel-default">
+    <div class="panel-heading">cost of tile</div>
+
+    <div class="panel-body">
+        <table id="cost-calculate" class="table table-bordered">
+            <tr>
+                <td>width</td>
+                <td><input class="w100per" id="width" type="number" placeholder="width of floor" value="10"/></td>
+                <td>feet</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td><input class="w100per" id="height" type="number" placeholder="height of floor" value="10"/></td>
+                <td>feet</td>
+            </tr>
+            <tr>
+                <td>cost</td>
+                <td><input class="w100per" id="cost" type="number" placeholder="cost per feet" value="1"/></td>
+                <td>cost per sq. feet</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button class="btn btn-block btn-primary" id="compute">compute</button>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered">
+            <tr>
+                <td>for total area</td>
+                <td><input class="w100per" id="total-area"></td>
+                <td>total cost is:</td>
+                <td><input class="w100per" id="total-cost"></td>
+            </tr>
+        </table>
     </div>
-
-    <table id="cost-calculate" class="table table-bordered">
-        <tr>
-            <td>width</td>
-            <td><input class="w100per" id="width" type="number" placeholder="width of floor" value="10"/></td>
-            <td>feet</td>
-        </tr>
-        <tr>
-            <td>height</td>
-            <td><input class="w100per" id="height" type="number" placeholder="height of floor" value="10"/></td>
-            <td>feet</td>
-        </tr>
-        <tr>
-            <td>cost</td>
-            <td><input class="w100per" id="cost" type="number" placeholder="cost per feet" value="1"/></td>
-            <td>cost per sq. feet</td>
-        </tr>
-    </table>
-    <button class="btn btn-block btn-default" id="compute">compute</button>
-    <table class="table table-bordered">
-        <tr>
-            <td>for total area</td>
-            <td><input class="w100per" id="total-area"></td>
-            <td>total cost is:</td>
-            <td><input class="w100per" id="total-cost"></td>
-        </tr>
-    </table>
-
 </div>
 
 <script type="text/javascript" src="js/main.js"></script>
