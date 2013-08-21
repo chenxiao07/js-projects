@@ -5,7 +5,7 @@ SED=$(which sed)
 
 REMOTES=("origin", "github")
 
-CURRENT_BRANCH=$($GIT branch | $SED -n '/\* /s///p')
+CURRENT_BRANCH="$GIT branch | $SED -n '/\* /s///p'"
 DEVELOP_BRANCH="dev"
 DEPLOY_BRANCHES=("master", "gh-pages", $CURRENT_BRANCH, "dev")
 
