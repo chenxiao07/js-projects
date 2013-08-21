@@ -18,17 +18,19 @@ deploy_branches=(
     )
 
 function main {
-    # first merge current chagnes into develop branch
+    echo "merge $current_branch into $develop_branch"
     $git checkout $develop_branch
     $git merge    $current_branch
 
     # then deploy changes to targe branches
     for br in $deploy_branches
     do
+        echo "deploying $br"
         $git checkout $br
         $git merge    $develop_branch
         for remote in $remotes
         do
+            echo "deploying $br to remote: $remote"
             $git push $remote $br
         done
     done
