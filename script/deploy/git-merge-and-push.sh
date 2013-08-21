@@ -6,35 +6,27 @@ sed=$(which sed)
 current_branch=$($git branch | $sed -n '/\* /s///p')
 develop_branch='dev'
 
-remotes=(
-        'origin'
-        'github'
-    )
-deploy_branches=(
-        'master'
-        'gh-pages'
-        $current_branch
-        $develop_branch
-    )
+remotes=(origin github)
+deploy_branches=(master gh-pages $current_branch $develop_branch)
 
 function main {
-    echo "merge $current_branch into $develop_branch"
+    echo "DEBUG: merge $current_branch into $develop_branch"
     $git checkout $develop_branch
     $git merge    $current_branch
 
     # then deploy changes to targe branches
-    for br in $deploy_branches
+    for branch in $deploy_branches
     do
-        echo "deploying $br"
-        $git checkout $br
+        echo "DEBUG: deploying $branch"
+        $git checkout $branch
         $git merge    $develop_branch
         for remote in $remotes
         do
-            echo "deploying $br to remote: $remote"
-            $git push $remote $br
+            echo "DEBUG: deploying $branch to remote: $remote"
+            $git push $remote $branch
         done
     done
-    echo 'done deploying'
+    echo 'DEBUG: done deploying'
 }
 
 main
