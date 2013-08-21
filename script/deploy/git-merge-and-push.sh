@@ -24,7 +24,7 @@ function main {
         $git merge    $develop_branch
         for remote in $remotes; do
             echo "DEBUG: deploying $branch to remote: $remote"
-            $git push $remote $branch 2&1>/dev/null
+            $git push $remote $branch
         done
     done
     echo 'DEBUG: done deploying'
