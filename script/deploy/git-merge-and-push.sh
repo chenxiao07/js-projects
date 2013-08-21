@@ -3,7 +3,7 @@
 GIT=$(which git)
 SED=$(which sed)
 
-REMOTES=("origin" "github")
+REMOTES=("origin", "github")
 
 CURRENT_BRANCH=$($GIT branch | $SED -n '/\* /s///p')
 DEVELOP_BRANCH="dev"
