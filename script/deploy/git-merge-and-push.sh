@@ -23,7 +23,7 @@ function main {
         for remote in $remotes
         do
             echo "DEBUG: deploying $branch to remote: $remote"
-            $git push $remote $branch
+            $git push $remote $branch 2>/dev/null
         done
     done
     echo 'DEBUG: done deploying'
