@@ -14,7 +14,7 @@
                     {% for link in tag.links %}
                     <tr>
                         <td>
-                            <a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}" title="{{ link.description }}"
+                            <a href="{{ page.base_url }}{{ tag.sort }}/{{ link.name }}" title="{{ link.name }}"
                                 class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}>
                                 <span class="limit-len len12">{{ link.name }}</span>
                             </a>
