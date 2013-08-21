@@ -21,7 +21,7 @@ function main {
         for remote in $remotes; do
             echo "DEBUG: deploying $branch to remote: $remote"
             command="$git push $remote $branch"
-            $command 2>/dev/null
+            $command 2&1>/dev/null
             if (( $? == 0 )); then
                 echo "DEBUG: done deploying $branch to remote: $remote"
             else
