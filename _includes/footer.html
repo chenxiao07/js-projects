@@ -44,7 +44,7 @@
         {% for link in page.back_links %}
     <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-lg btn-default">
         <span class="glyphicon glyphicon-chevron-left"></span>
-        {{ link.title }}
+        <span class="limit-len len9">{{ link.title }}</span>
     </a>
         {% endfor %}
     {% endif %}
