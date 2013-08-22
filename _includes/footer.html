@@ -36,13 +36,13 @@
     </div><!-- /.modal-dialog -->
 </div>
 <div class="btn-group btn-group-justified" id="btn-group-back-links">
-    <a href="#top" class="btn btn-default">
+    <a href="#top" class="btn btn-lg btn-default">
         <span class="glyphicon glyphicon-chevron-up"></span>
         top
     </a>
     {% if page.back_links %}
         {% for link in page.back_links %}
-    <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-default">
+    <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-lg btn-default">
         <span class="glyphicon glyphicon-chevron-left"></span>
         {{ link.title }}
     </a>
