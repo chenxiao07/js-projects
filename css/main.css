@@ -1,4 +1,3 @@
-
 /* plugins & frameworks ajustment
  */
 /* bootstrap */
@@ -6,9 +5,6 @@ body,
 body.modal-open { /* bug in 3.0.0 ? */
     overflow-y: scroll;
     margin-right: 0;
-}
-header.navbar {
-    margin-bottom: 15px;
 }
 .navbar-collapse.in { /* bug in 3.0.0 */
     overflow-y: visible;
@@ -28,7 +24,6 @@ header.navbar {
     color: #428bca;
     background-color: #ffffff;
 }
-
 /* elements
  */
 /* button & link */
@@ -50,9 +45,6 @@ header.navbar {
 .align-right {
     text-align: right;
 }
-/* image */
-
-
 /* attributes
  */
 /* margin & padding */
@@ -102,45 +94,10 @@ header.navbar {
 .bg-color-f   { background-color: #fff; }
 .bg-color-fee { background-color: #fee; }
 .bg-color-efe { background-color: #efe; }
-
-.bg-color-primary {
-    background-color : #428bca;
-    border-color     : #428bca;
-    color            : #ffffff;
-}
-.bg-color-primary:hover {
-    color            : #ffffff;
-}
-.bg-color-success {
-    background-color : #5cb85c;
-    border-color     : #5cb85c;
-    color            : #ffffff;
-}
-.bg-color-success:hover {
-    color            : #ffffff;
-    background-color : #4cae4c;
-    border-color     : #449d44;
-}
-
 /* border radius */
 .border-r-1  { border-radius: 1em  }
 .border-r-05 { border-radius: .5em }
-
-.permission-0,
-.permission-1,
-.permission-2,
-.permission-3,
-.permission-4,
-.permission-5 {
-    color : #ffffff;
-}
-.permission-0 { background-color : #5cb85c; }
-.permission-1 { background-color : #5bc0de; }
-.permission-2 { background-color : #428bca; }
-.permission-3 { background-color : #f0ad4e; }
-.permission-4 { background-color : #d9534f; }
-.permission-5 { background-color : #474949; }
-
 /* float */
 .float-right { float: right; }
-
+/* cursor */
+.cursor-pointer { cursor: pointer; }

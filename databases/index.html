@@ -53,10 +53,8 @@ tags:
             is_finished: 0
             description: Create a forum for you and your buddies to post, administer and share thoughts and ideas.
 ---
-
 {% for cat in page.tags %}
     {% for tag in cat.contents %}
         {% include accordion.html tag = tag %}
     {% endfor %}
 {% endfor %}
-

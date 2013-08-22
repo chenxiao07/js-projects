@@ -62,10 +62,8 @@ tags:
             is_finished: 0
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
 ---
-
 {% for cat in page.tags %}
     {% for tag in cat.contents %}
         {% include accordion.html tag = tag %}
     {% endfor %}
 {% endfor %}
-

@@ -19,7 +19,6 @@ tags:
       - sort: graphics-and-multimedia
       - sort: games
 ---
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,13 +37,4 @@ tags:
         <!-- JS and analytics only. -->
         {% include footer.html %}
     </body>
-    <script type="text/javascript">
-        $(function (){
-            $('.btn-popover').on('click', function(){
-                RSLoader.load($(this).data('content'), $(this).data('title'));
-                RSLoader.show();
-            });
-        });
-    </script>
 </html>
-

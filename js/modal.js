@@ -1,4 +1,3 @@
-
 !function ($) {
     var Logger = function(){
         this.trigger = $('#show-modal-log');
@@ -20,7 +19,6 @@
             }
         }
     };
-
     var RSLoader = function(){
         this.trigger = $('#show-modal-resource');
         this.title   = $('#modal-resource-title');
@@ -46,8 +44,6 @@
             }
         }
     };
-
     window.Logger   = new Logger();
     window.RSLoader = new RSLoader();
 }(window.jQuery);
-

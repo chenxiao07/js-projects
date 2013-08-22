@@ -65,10 +65,8 @@ tags:
             is_finished: 0
             description: Functions for encrypting and decrypting data messages. Then send them to a friend.
 ---
-
 {% for cat in page.tags %}
     {% for tag in cat.contents %}
         {% include accordion.html tag = tag %}
     {% endfor %}
 {% endfor %}
-

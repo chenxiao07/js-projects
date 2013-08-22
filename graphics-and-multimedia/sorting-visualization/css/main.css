@@ -1,4 +1,3 @@
-
 body {
     background-color : #FFF1CE;
     height           : 100%;
@@ -8,7 +7,6 @@ body {
 body.scroll {
     overflow-y : auto;
 }
-
 div#controller {
     position      : fixed;
     float         : right;
@@ -24,4 +22,3 @@ div#controller:hover {
 div#controller table {
     margin: 0;
 }
-

@@ -1,11 +1,8 @@
-
 <div class="panel-group" id="{{ tag.sort }}">
-    <div class="panel {% if tag.finished_amount > 0 %} panel-success {% else %} panel-default {% endif %}">
-        <div class="panel-heading">
-            <a data-toggle="collapse" data-parent="#{{ tag.sort }}" href="#{{ tag.sort }}-content" class="accordion-toggle">
-                {{ tag.sort }}
-                <span class="label {% if tag.finished_amount > 0 %} label-success {% else %} label-default {% endif %} float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
-            </a>
+    <div class="panel {% if tag.finished_amount > 0 %} panel-success {% else %} panel-warning {% endif %}">
+        <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#{{ tag.sort }}" href="#{{ tag.sort }}-content" class="accordion-toggle panel-heading">
+            {{ tag.sort }}
+            <span class="label {% if tag.finished_amount > 0 %} label-success {% else %} label-warning {% endif %} float-right">{{ tag.finished_amount }} / {{ tag.total_amount }}</span>
         </div> <!-- div.accordion-heading -->
         <div id="{{ tag.sort }}-content" class="panel-collapse collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
             <div class="accordion-inner">
@@ -27,4 +24,3 @@
         </div> <!-- div.accordion-body -->
     </div> <!-- div.accordion-group -->
 </div> <!-- div.accordion -->
-

@@ -71,10 +71,8 @@ tags:
             is_finished: 0
             description: A simple game of tic tac toe. For added complexity allow the application to be played over the internet where another player can against you.
 ---
-
 {% for cat in page.tags %}
     {% for tag in cat.contents %}
         {% include accordion.html tag = tag %}
     {% endfor %}
 {% endfor %}
-
