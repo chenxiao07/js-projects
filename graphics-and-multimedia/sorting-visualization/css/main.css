@@ -11,7 +11,6 @@ div#controller {
     border-radius : 0.5em;
     box-shadow    : 0 0 1px #a2a2a4;
     opacity       : 0.8;
-    z-index       : 1000;
 }
 div#controller:hover {
     opacity       : 1;
