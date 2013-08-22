@@ -2,10 +2,8 @@
 
 git=$(which git)
 sed=$(which sed)
-
 current_branch=$($git branch | $sed -n '/\* /s///p')
 develop_branch='dev'
-
 remotes=('origin' 'github');
 deploy_branches=('master' 'gh-pages' $current_branch $develop_branch);
 
@@ -14,7 +12,7 @@ function main {
     $git checkout $develop_branch
     $git merge    $current_branch
 
-    for branch in "${deploy_branches[@]}"; do
+    for branch in ${deploy_branches[@]}; do
         echo "DEBUG: deploying $branch"
         $git checkout $branch
         $git merge    $develop_branch
