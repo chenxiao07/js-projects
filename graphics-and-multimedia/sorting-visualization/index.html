@@ -16,16 +16,16 @@ extra_keywords: sort sorting algorithm visualization bogo bubble bucket cocktail
     <table class="table table-bordered table-condensed">
         <tr class="active">
             <td>interval</td>
-            <td><input class="w100per" id="interval-time" type="number" min="10" max="2000" placeholder="interval" value="50"/></td>
+            <td><input class="w100per" id="interval-time" type="number" min="10" max="2000" placeholder="interval" value="50" onFocus="window.scrollTo(0, 0);"/></td>
         </tr>
         <tr class="active">
             <td>length</td>
-            <td><input class="w100per" id="array-length" type="number" min="5" max="200" placeholder="length" value="10"/></td>
+            <td><input class="w100per" id="array-length" type="number" min="5" max="200" placeholder="length" value="10" onFocus="window.scrollTo(0, 0);"/></td>
         </tr>
         <tr class="active">
             <td>method</td>
             <td>
-                <select id="method" name="method">
+                <select id="method" name="method" onFocus="window.scrollTo(0, 0);">
                     <option value="bogo" selected>bogo</option>
                     <option value="bubble">bubble</option>
                     <option value="bucket">bucket</option>
@@ -46,8 +46,8 @@ extra_keywords: sort sorting algorithm visualization bogo bubble bucket cocktail
         <tr class="active">
             <td>sorted</td>
             <td>
-                <input name="is-pre-sorted" type="radio" value="1"/> Y
-                <input name="is-pre-sorted" type="radio" value="0" checked/> N
+                <input name="is-pre-sorted" type="radio" value="1" onFocus="window.scrollTo(0, 0);"/> Y
+                <input name="is-pre-sorted" type="radio" value="0" onFocus="window.scrollTo(0, 0);" checked/> N
             </td>
         </tr>
         <tr class="active">
