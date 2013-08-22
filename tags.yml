@@ -3,7 +3,7 @@ tags:
     contents:
       - sort: numbers
         total_amount: 16
-        finished_amount: 9
+        finished_amount: 10
         is_collapsed: 1
         links:
           - name: alarm-clock
@@ -16,7 +16,7 @@ tags:
             is_finished: 1
             description: Converter to convert a decimal number to binary or a binary number to its decimal equivalent.
           - name: calculator
-            is_finished: 0
+            is_finished: 1
             description: A simple calculator to do basic operators. Make it a scientific calculator for added complexity.
           - name: change-return
             is_finished: 1

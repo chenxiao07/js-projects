@@ -47,6 +47,9 @@ header.navbar {
 .align-center {
     text-align: center;
 }
+.align-right {
+    text-align: right;
+}
 /* image */
 
 
@@ -88,6 +91,7 @@ header.navbar {
 .w33per    { width : 33%   ; }
 .w45per    { width : 45%   ; }
 .w80per    { width : 80%   ; }
+.h100per   { height: 100%  ; }
 /* color */
 .color-d   { color: #ddd;}
 .color-fee { color: #fee;}
