@@ -102,3 +102,8 @@ body.modal-open { /* bug in 3.0.0 ? */
 .float-right { float: right; }
 /* cursor */
 .cursor-pointer { cursor: pointer; }
+/* opacity */
+.opacity05 { opacity: 0.5; }
+.opacity05:hover {
+    opacity: 1;
+}

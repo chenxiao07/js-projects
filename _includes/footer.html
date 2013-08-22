@@ -35,16 +35,16 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
-<div class="btn-group btn-group-justified" id="btn-group-back-links">
-    <a href="#top" class="btn btn-lg btn-default">
+<div class="btn-group-vertical w100per" id="btn-group-back-links">
+    <a href="#top" class="btn btn-lg btn-primary opacity05">
         <span class="glyphicon glyphicon-chevron-up"></span>
         top
     </a>
     {% if page.back_links %}
         {% for link in page.back_links %}
-    <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-lg btn-default">
+    <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-lg btn-primary opacity05">
         <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="limit-len len9">{{ link.title }}</span>
+        {{ link.title }}
     </a>
         {% endfor %}
     {% endif %}
