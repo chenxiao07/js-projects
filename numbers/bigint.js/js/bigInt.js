@@ -1,7 +1,5 @@
-
 ;(function(exports){
-"use strict";
-
+    "use strict";
     // faster than 'array.reverse()', 'for swap', 'XOR swap'...
     // for more detail: http://jsperf.com/js-array-reverse-vs-while-loop/5
     function _reverse(array){
@@ -268,4 +266,3 @@
 
     exports.BigInt = BigInt;
 })(typeof exports !== 'undefined' ? exports : this);
-

@@ -12,14 +12,9 @@ extra_desc: A simple calculator to do basic operators. Make it a scientific calc
 extra_keywords: calculator
 ---
 <style type="text/css">
-    input#display {
-        font-size: 3em;
-    }
-    button#btn-equal {
-        font-size: 3.5em;
-    }
+    input#display    { font-size: 2.5em; }
+    button#btn-equal { font-size: 3.5em; }
 </style>
-
 <div class="panel panel-default">
     <div class="panel-heading">caculator</div>
 
@@ -27,42 +22,41 @@ extra_keywords: calculator
         <table class="table table-bordered">
             <tr><td colspan="4"><input type="text" id="display" class="w100per align-right" value="0" disabled="true"/></td></tr>
             <tr>
-                <td><button class="btn btn-block btn-info" id="btn-mc">mc</button></td>
-                <td><button class="btn btn-block btn-info" id="btn-m-plus">m+</button></td>
-                <td><button class="btn btn-block btn-info" id="btn-m-minus">m-</button></td>
-                <td><button class="btn btn-block btn-info" id="btn-mr">mr</button></td>
+                <td><button class="btn btn-block btn-info btn-mopt" value="mc" disabled>mc</button></td>
+                <td><button class="btn btn-block btn-info btn-mopt" value="m+" disabled>m+</button></td>
+                <td><button class="btn btn-block btn-info btn-mopt" value="m-" disabled>m-</button></td>
+                <td><button class="btn btn-block btn-info btn-mopt" value="mr" disabled>mr</button></td>
             </tr>
             <tr>
                 <td><button class="btn btn-block btn-success" id="btn-c">c</button></td>
-                <td><button class="btn btn-block btn-success" id="btn-is-negative">+/-</button></td>
-                <td><button class="btn btn-block btn-success" id="btn-divide">/</button></td>
-                <td><button class="btn btn-block btn-success" id="btn-multiply">x</button></td>
+                <td><button class="btn btn-block btn-success" disabled id="btn-additive-inverse">+/-</button></td>
+                <td><button class="btn btn-block btn-success btn-opt" value="/" id="btn-divide">/</button></td>
+                <td><button class="btn btn-block btn-success btn-opt" value="x" id="btn-multiply">x</button></td>
             </tr>
             <tr>
-                <td><button class="btn btn-block btn-primary" value="7" id="btn-7">7</button></td>
-                <td><button class="btn btn-block btn-primary" value="8" id="btn-8">8</button></td>
-                <td><button class="btn btn-block btn-primary" value="9" id="btn-9">9</button></td>
-                <td><button class="btn btn-block btn-success" id="btn-minus">-</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="7" id="btn-7">7</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="8" id="btn-8">8</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="9" id="btn-9">9</button></td>
+                <td><button class="btn btn-block btn-success btn-opt" value="-" id="btn-minus">-</button></td>
             </tr>
             <tr>
-                <td><button class="btn btn-block btn-primary" value="4" id="btn-4">4</button></td>
-                <td><button class="btn btn-block btn-primary" value="5" id="btn-5">5</button></td>
-                <td><button class="btn btn-block btn-primary" value="6" id="btn-6">6</button></td>
-                <td><button class="btn btn-block btn-success" id="btn-plus">+</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="4" id="btn-4">4</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="5" id="btn-5">5</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="6" id="btn-6">6</button></td>
+                <td><button class="btn btn-block btn-success btn-opt" value="+" id="btn-plus">+</button></td>
             </tr>
             <tr>
-                <td><button class="btn btn-block btn-primary" value="1" id="btn-1">1</button></td>
-                <td><button class="btn btn-block btn-primary" value="2" id="btn-2">2</button></td>
-                <td><button class="btn btn-block btn-primary" value="3" id="btn-3">3</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="1" id="btn-1">1</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="2" id="btn-2">2</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="3" id="btn-3">3</button></td>
                 <td rowspan="2"><button class="btn btn-block btn-warning h100per" id="btn-equal">=</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button class="btn btn-block btn-primary" value="0" id="btn-0">0</button></td>
-                <td><button class="btn btn-block btn-primary" id="btn-point">.</button></td>
+                <td colspan="2"><button class="btn btn-block btn-primary btn-num" value="0" id="btn-0">0</button></td>
+                <td><button class="btn btn-block btn-primary btn-num" value="." id="btn-point">.</button></td>
             </tr>
         </table>
     </div>
 </div>
-
+<script type="text/javascript" src="js/calculator.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
