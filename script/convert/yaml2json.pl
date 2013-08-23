@@ -1,19 +1,20 @@
 #!/usr/bin/env perl
-use utf8;
 use strict;
+use utf8;
 use warnings;
 use Encode;
-use YAML::Loader;
 use JSON;
+use YAML::Loader;
 
-my $loader = YAML::Loader->new;
 my $stdin;
 while ( <STDIN> ) {
     $stdin .= $_;
 }
 $stdin = decode("utf8", $stdin);
 
-my $yaml = $loader->load($stdin);
-my $json_text = encode_json $yaml;
+my $yaml_loader = YAML::Loader->new;
+my $yaml_data   = $yaml_loader->load($stdin);
+my $json_text   = encode_json $yaml_data;
 
 print "\n$json_text\n";
+
