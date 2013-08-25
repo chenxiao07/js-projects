@@ -7,12 +7,10 @@
         <div id="{{tag.sort}}-content" class="panel-collapse collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
             <div class="accordion-inner">
                 <table class="table table-bordered">
-                    {% for link in tag.links %}
-                    <tr>
+                    {% for link in tag.links %}<tr>
                         <td><a href="{{page.base_url}}{{tag.sort}}/{{link.name}}" title="{{link.name}}" class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}><span class="limit-len len12">{{link.name}}</span></a></td>
                         <td><button type="button" class="btn btn-block btn-link btn-popover" data-content="{{link.description}}" data-title="{{link.name}}">desc</button></td>
-                    </tr>
-                    {% endfor %}
+                    </tr>{% endfor %}
                 </table>
             </div>
         </div> <!-- div.accordion-body -->
