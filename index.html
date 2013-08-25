@@ -522,9 +522,7 @@ tags:
 ---
 {% for cat in page.tags %}
 <div class="row margin-bottom1">
-    <h4><span class="label label-default">{{ cat.category }}</span></h4>
-    {% for tag in cat.contents %}
-        {% include accordion.html tag = tag %}
-    {% endfor %}
+    <h4><span class="label label-default">{{cat.category}}</span></h4>
+{% for tag in cat.contents %}{% include accordion.html tag = tag %}{% endfor %}
 </div>
 {% endfor %}

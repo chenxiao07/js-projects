@@ -63,7 +63,5 @@ tags:
             description: Enter a zip or postal code and have it return which city/ cities that are in that zip code.
 ---
 {% for cat in page.tags %}
-    {% for tag in cat.contents %}
-        {% include accordion.html tag = tag %}
-    {% endfor %}
+{% for tag in cat.contents %}{% include accordion.html tag = tag %}{% endfor %}
 {% endfor %}
