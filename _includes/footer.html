@@ -1,58 +1,42 @@
 <footer>
-<a id="show-modal-log" href="#modal-log" data-toggle="modal" style="visibility:hidden;">log</a>
-<a id="show-modal-resource" href="#modal-resource" data-toggle="modal" style="visibility:hidden;">resource</a>
-<div class="modal fade" id="modal-log">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">log</h4>
-            </div>
-            <div class="modal-body">
-                <div id="modal-log-content">
+    <a id="show-modal-log" href="#modal-log" data-toggle="modal"></a>
+    <a id="show-modal-resource" href="#modal-resource" data-toggle="modal"></a>
+    <div class="modal fade" id="modal-log">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">log</h4>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<div class="modal fade" id="modal-resource">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="modal-resource-title">resource</h4>
-            </div>
-            <div class="modal-body">
-                <div id="modal-resource-content">
+                <div class="modal-body"><div id="modal-log-content"></div></div>
+                <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="modal-resource">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modal-resource-title">resource</h4>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
-<div class="btn-group-vertical w100per" id="btn-group-back-links">
-    <a href="#top" class="btn btn-lg btn-primary opacity05">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-        top
-    </a>
-    {% if page.back_links %}
-        {% for link in page.back_links %}
-    <a href="{{ page.base_url }}{{ link.url }}" class="btn btn-lg btn-primary opacity05">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        {{ link.title }}
-    </a>
-        {% endfor %}
-    {% endif %}
-</div>
+                <div class="modal-body"><div id="modal-resource-content"></div></div>
+                <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <div class="btn-group-vertical w100per" id="btn-group-back-links">
+        <a href="#top" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-up"></span>top</a>
+        {% if page.back_links %}
+            {% for link in page.back_links %}
+        <a href="{{page.base_url}}{{link.url}}" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-left"></span>{{link.title}}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
 </footer>
 <!-- bootstrap -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="{{ page.base_url }}assets/js/modal.js"></script>
-<script src="{{ page.base_url }}assets/js/validator.js"></script>
-<script src="{{ page.base_url }}assets/js/global.js"></script>
+<script src="{{page.base_url}}assets/js/global/modal.js"></script>
+<script src="{{page.base_url}}assets/js/global/validator.js"></script>
+<script src="{{page.base_url}}assets/js/global/misc.js"></script>

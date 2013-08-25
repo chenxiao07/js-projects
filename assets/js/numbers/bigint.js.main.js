@@ -1,9 +1,7 @@
 ;(function(){
     window.addEventListener('load', function(){
-        var operators1, operators2, str1, str2,
-            resultInt;
-        var $resultArea = document.getElementById('result');
-
+        var operators1, operators2, str1, str2, resultInt,
+            $resultArea = document.getElementById('result');
         document.getElementById('plus').addEventListener('click', function(){
             try {
                 init();
@@ -54,11 +52,7 @@
                 Logger.show();
             }
         });
-
-        document.getElementsByTagName('form')[0].onsubmit = function(){
-            return false;
-        };
-
+        document.getElementsByTagName('form')[0].onsubmit = function(){ return false; };
         function init(){
             str1 = document.getElementById('operator1').value;
             str2 = document.getElementById('operator2').value;

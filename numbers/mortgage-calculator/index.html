@@ -11,10 +11,8 @@ title: mortgage calculator
 extra_desc: Calculate the monthly payments of a fixed term mortgage over given Nth terms at a given interest rate. Also figure out how long it will take the user to pay back the loan.
 extra_keywords: calculate mortgage loan
 ---
-
 <div class="panel panel-default">
     <div class="panel-heading">mortgage calculator</div>
-
     <div class="panel-body">
         <div class="row">
             <div id="mortgage-calculator" class="col-lg-6">
@@ -33,8 +31,7 @@ extra_keywords: calculate mortgage loan
                         <td><button class="btn btn-block btn-small btn-primary" id="mortgage-compute">compute</button></td>
                     </tr>
                 </table>
-                <table id="mortgage-result-monthly" class="table table-bordered">
-                </table>
+                <table id="mortgage-result-monthly" class="table table-bordered"></table>
             </div>
             <div id="loan-calculator" class="col-lg-6">
                 <h4>loan calculator</h4>
@@ -52,11 +49,9 @@ extra_keywords: calculate mortgage loan
                         <td><button class="btn btn-block btn-small btn-primary" id="loan-compute">compute</button></td>
                     </tr>
                 </table>
-                <table id="loan-result-monthly" class="table table-bordered">
-                </table>
+                <table id="loan-result-monthly" class="table table-bordered"></table>
             </div>
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="js/main.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/mortgage-calculator.main.js"></script>

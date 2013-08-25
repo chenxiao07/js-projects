@@ -11,23 +11,20 @@ title: canvas clock
 extra_desc: javascript Clock simulation.
 extra_keywords: clock simulation clock.js
 ---
-
 <div class="panel panel-default">
     <div class="panel-heading">canvas clock</div>
-
     <div class="panel-body">
         <div class="row align-center"><canvas id="clock"></canvas></div>
         <div class="row align-center">
-            <button id="r"               value="100"     class="controller btn btn-small btn-primary">r              </button>
-            <button id="scaleColor"      value="#FFFF00" class="controller btn btn-small btn-primary">scaleColor     </button>
-            <button id="faceColor"       value="#FFFF00" class="controller btn btn-small btn-primary">faceColor      </button>
-            <button id="frameColor"      value="#FFFF00" class="controller btn btn-small btn-primary">frameColor     </button>
-            <button id="secondHandColor" value="#FFFF00" class="controller btn btn-small btn-primary">secondHandColor</button>
-            <button id="minuteHandColor" value="#FFFF00" class="controller btn btn-small btn-primary">minuteHandColor</button>
-            <button id="hourHandColor"   value="#FFFF00" class="controller btn btn-small btn-primary">hourHandColor  </button>
+            <button class="controller btn btn-small btn-primary" value="100" id="r" >r</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="scaleColor">scaleColor</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="faceColor">faceColor</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="frameColor">frameColor</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="secondHandColor">secondHandColor</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="minuteHandColor">minuteHandColor</button>
+            <button class="controller btn btn-small btn-primary" value="#FFFF00" id="hourHandColor">hourHandColor</button>
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="js/clock.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="{{page.base_url}}assets/js/graphics-and-multimedia/clock.js"></script>
+<script src="{{page.base_url}}assets/js/graphics-and-multimedia/clock.js.main.js"></script>

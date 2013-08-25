@@ -47,3 +47,10 @@
     window.Logger   = new Logger();
     window.RSLoader = new RSLoader();
 }(window.jQuery);
+
+!function ($) {
+    $('.btn-popover').on('click', function(){
+        RSLoader.load($(this).data('content'), $(this).data('title'));
+        RSLoader.show();
+    });
+}(window.jQuery);

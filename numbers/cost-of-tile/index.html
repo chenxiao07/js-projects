@@ -11,10 +11,8 @@ title: cost of tile
 extra_desc: Calculate the total cost of tile it would take to cover a floor plan of width and height, using a cost entered by the user.
 extra_keywords: calculate cost tile
 ---
-
 <div class="panel panel-default">
     <div class="panel-heading">cost of tile</div>
-
     <div class="panel-body">
         <table id="cost-calculate" class="table table-bordered">
             <tr>
@@ -32,11 +30,7 @@ extra_keywords: calculate cost tile
                 <td><input class="w100per" id="cost" type="number" placeholder="cost per feet" value="1"/></td>
                 <td>cost per sq. feet</td>
             </tr>
-            <tr>
-                <td colspan="3">
-                    <button class="btn btn-block btn-primary" id="compute">compute</button>
-                </td>
-            </tr>
+            <tr><td colspan="3"><button class="btn btn-block btn-primary" id="compute">compute</button></td></tr>
         </table>
         <table class="table table-bordered">
             <tr>
@@ -48,6 +42,4 @@ extra_keywords: calculate cost tile
         </table>
     </div>
 </div>
-
-<script type="text/javascript" src="js/main.js"></script>
-
+<script src="{{page.base_url}}assets/js/numbers/cost-of-tile.main.js"></script>

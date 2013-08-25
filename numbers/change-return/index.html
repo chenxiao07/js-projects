@@ -11,10 +11,8 @@ title: change return
 extra_desc: The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.
 extra_keywords: changeGiver change-return change return.
 ---
-
 <div class="panel panel-default">
     <div class="panel-heading">change return</div>
-
     <div class="panel-body">
         <div class="row margin1" id="controller">
             <div class="btn-group btn-group-justified">
@@ -23,45 +21,29 @@ extra_keywords: changeGiver change-return change return.
                 <a id="getChangeGiverStatus" class="btn btn-block btn-info">status</a>
             </div>
         </div>
-
-        <div id="result-field" class="alert alert-info">
-            <div id="result-plan">
-            </div>
-        </div>
-
+        <div id="result-field" class="alert alert-info"><div id="result-plan"></div></div>
         <div class="row margin1" id="numbers">
-            <div class="col-lg-4">
-                <form id="init-form" class="form-horizontal alert" data-prefix="init">
-                </form>
-            </div>
+            <div class="col-lg-4"><form id="init-form" class="form-horizontal alert" data-prefix="init"></form></div>
             <div class="col-lg-4">
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label for="price" class="col-lg-3 control-label">price(分)</label>
-                        <div class="col-lg-9">
-                            <input id="price" class="form-control" type="number" placeholder="price" value="102"/>
-                        </div>
+                        <div class="col-lg-9"><input id="price" class="form-control" type="number" placeholder="price" value="102"/></div>
                     </div>
                 </form>
-                <form id="paid-form" class="form-horizontal alert alert-success" data-prefix='paid'>
-                </form>
+                <form id="paid-form" class="form-horizontal alert alert-success" data-prefix='paid'></form>
             </div>
             <div class="col-lg-4">
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label for="total-money" class="col-lg-3 control-label">total(分)</label>
-                        <div class="col-lg-9">
-                            <input id="total-money" class="form-control" type="number"/>
-                        </div>
+                        <div class="col-lg-9"><input id="total-money" class="form-control" type="number"/></div>
                     </div>
                 </form>
-                <form id="status-form" class="form-horizontal alert alert-info" data-prefix='status'>
-                </form>
+                <form id="status-form" class="form-horizontal alert alert-info" data-prefix='status'></form>
             </div>
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="js/changeGiver.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
+<script src="{{page.base_url}}assets/js/numbers/changeGiver.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/change-return.main.js"></script>

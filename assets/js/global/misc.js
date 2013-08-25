@@ -1,11 +1,3 @@
-// self defined
-!function ($) {
-    $('.btn-popover').on('click', function(){
-        RSLoader.load($(this).data('content'), $(this).data('title'));
-        RSLoader.show();
-    });
-}(window.jQuery);
-
 // <!-- Analytics -->
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,4 +14,3 @@ add('http://apis.google.com/js/plusone.js');// Google+ button
 add('http://connect.facebook.net/en_US/all.js#xfbml=1&appId=502246906455468', 'facebook-jssdk');// Facebook SDK
 add('http://platform.twitter.com/widgets.js');// Twitter SDK
 fjs.parentNode.insertBefore(frag, fjs);}(document, 'script'));
-
