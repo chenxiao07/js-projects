@@ -13,6 +13,14 @@ extra_keywords: calculator
 ---
 <div class="panel panel-default">
     <div class="panel-heading">alarm-clock</div>
-    <div class="panel-body"></div>
+    <div class="panel-body">
+        <div class="align-center">
+            <audio controls id="ring">
+                <source src="{{page.base_url}}assets/ogg/nokia-tune.ogg" type="audio/ogg">
+                <source src="{{page.base_url}}assets/mp3/nokia-tune.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
 </div>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/alarm-clock.main.js"></script>
