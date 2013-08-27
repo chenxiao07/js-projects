@@ -1,14 +1,14 @@
-<div class="panel-group" id="{{tag.sort}}">
-    <div class="panel {% if tag.finished_amount > 0 %} panel-success {% else %} panel-warning {% endif %}">
-        <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#{{tag.sort}}" href="#{{tag.sort}}-content" class="accordion-toggle panel-heading">
-            {{tag.sort}}
-            <span class="label {% if tag.finished_amount > 0 %} label-success {% else %} label-warning {% endif %} float-right">{{tag.finished_amount}} / {{tag.total_amount}}</span>
+<div class="panel-group" id="{{include.tag.sort}}">
+    <div class="panel {% if include.tag.finished_amount > 0 %} panel-success {% else %} panel-warning {% endif %}">
+        <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#{{include.tag.sort}}" href="#{{include.tag.sort}}-content" class="accordion-toggle panel-heading">
+            {{include.tag.sort}}
+            <span class="label {% if include.tag.finished_amount > 0 %} label-success {% else %} label-warning {% endif %} float-right">{{include.tag.finished_amount}} / {{include.tag.total_amount}}</span>
         </div>
-        <div id="{{tag.sort}}-content" class="panel-collapse collapse {% if tag.is_collapsed == 0 %} in {% endif %}">
+        <div id="{{include.tag.sort}}-content" class="panel-collapse collapse {% if include.is_collapsed %} {% else %} in {% endif %}">
             <div class="accordion-inner">
                 <table class="table table-bordered">
-                    {% for link in tag.links %}<tr>
-                        <td><a href="{{page.base_url}}{{tag.sort}}/{{link.name}}" title="{{link.name}}" class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}><span class="limit-len len12">{{link.name}}</span></a></td>
+                    {% for link in include.tag.links %}<tr>
+                        <td><a href="{{page.base_url}}{{include.tag.sort}}/{{link.name}}" title="{{link.name}}" class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}><span class="limit-len len12">{{link.name}}</span></a></td>
                         <td><button type="button" class="btn btn-block btn-link btn-popover" data-content="{{link.description}}" data-title="{{link.name}}">desc</button></td>
                     </tr>{% endfor %}
                 </table>

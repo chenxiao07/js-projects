@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-jekyll serve --watch
+jekyll serve --watch --trace
 
