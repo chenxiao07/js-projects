@@ -9,18 +9,50 @@ back_links:
 slug: basic
 title: alarm clock
 extra_desc: A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.
-extra_keywords: calculator
+extra_keywords: alarm clock html5 audio
 ---
 <div class="panel panel-default">
     <div class="panel-heading">alarm-clock</div>
     <div class="panel-body">
-        <div class="align-center">
-            <audio controls id="ring">
-                <source src="{{page.base_url}}assets/ogg/nokia-tune.ogg" type="audio/ogg">
-                <source src="{{page.base_url}}assets/mp3/nokia-tune.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
+        <table class="table table-bordered">
+            <tr>
+                <td>hour</td>
+                <td><input class="form-control" type="range" name="hour" min="0" max="24" value="0" id="input-hour"/></td>
+                <td><input class="form-control" type="number" id="hour" disabled/></td>
+            </tr>
+            <tr>
+                <td>minute</td>
+                <td><input class="form-control" type="range" name="minute" min="0" max="60" value="1" id="input-minute"/></td>
+                <td><input class="form-control" type="number" id="minute" disabled/></td>
+            </tr>
+            <tr>
+                <td>second</td>
+                <td><input class="form-control" type="range" name="second" min="0" max="60" value="1" id="input-second"/></td>
+                <td><input class="form-control" type="number" id="second" disabled/></td>
+            </tr>
+            <tr>
+                <td>ring</td>
+                <td colspan="2">
+                    <select id="ring-name" name="ring-name" class="form-control">
+                        <option value="nokia-tune" selected>nokia-tune</option>
+                    </select>
+                </td>
+            <tr>
+            <tr>
+                <td>action</td>
+                <td colspan="2">
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-lg btn-success" id="countdown"><span class="glyphicon glyphicon-play"></span> countdown</a>
+                        <a class="btn btn-lg btn-warning" id="reset"><span class="glyphicon glyphicon-stop"></span> reset</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <audio controls loop="true" id="ring" class="w100per">
+            <source src="{{page.base_url}}assets/ogg/nokia-tune.ogg" type="audio/ogg">
+            <source src="{{page.base_url}}assets/mp3/nokia-tune.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </div>
 <script src="{{page.base_url}}assets/js/numbers/alarm-clock.main.js"></script>
