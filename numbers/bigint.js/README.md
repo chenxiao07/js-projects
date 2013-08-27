@@ -1,5 +1,1 @@
-# bigInt.js
-
-javascript library for big integer
-
-see [demo](http://leungwensen.github.io/js-projects/bigInt.js/)
+../../assets/md/numbers/bigint.js.readme.md
