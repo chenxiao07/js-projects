@@ -17,30 +17,28 @@ extra_keywords: alarm clock html5 audio
         <table class="table table-bordered">
             <tr>
                 <td>hour</td>
-                <td><input class="form-control" type="range" name="hour" min="0" max="24" value="0" id="input-hour"/></td>
-                <td><input class="form-control" type="number" id="hour" disabled/></td>
-            </tr>
-            <tr>
                 <td>minute</td>
-                <td><input class="form-control" type="range" name="minute" min="0" max="60" value="1" id="input-minute"/></td>
-                <td><input class="form-control" type="number" id="minute" disabled/></td>
+                <td>second</td>
             </tr>
             <tr>
-                <td>second</td>
+                <td><input class="form-control" type="range" name="hour" min="0" max="24" value="0" id="input-hour"/></td>
+                <td><input class="form-control" type="range" name="minute" min="0" max="60" value="1" id="input-minute"/></td>
                 <td><input class="form-control" type="range" name="second" min="0" max="60" value="1" id="input-second"/></td>
+            </tr>
+            <tr>
+                <td><input class="form-control" type="number" id="hour" disabled/></td>
+                <td><input class="form-control" type="number" id="minute" disabled/></td>
                 <td><input class="form-control" type="number" id="second" disabled/></td>
             </tr>
             <tr>
-                <td>ring</td>
-                <td colspan="2">
+                <td colspan="3">
                     <select id="ring-name" name="ring-name" class="form-control">
                         <option value="nokia-tune" selected>nokia-tune</option>
                     </select>
                 </td>
             <tr>
             <tr>
-                <td>action</td>
-                <td colspan="2">
+                <td colspan="3">
                     <div class="btn-group btn-group-justified">
                         <a class="btn btn-lg btn-success" id="countdown"><span class="glyphicon glyphicon-play"></span> countdown</a>
                         <a class="btn btn-lg btn-warning" id="reset"><span class="glyphicon glyphicon-stop"></span> reset</a>
