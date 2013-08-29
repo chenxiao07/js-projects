@@ -41,8 +41,7 @@
                 changeGiver.init(money, nameForAmounts);
                 $('#getChangeGiverStatus').click();
             } catch(err) {
-                Logger.log(err, 'alert-danger');
-                Logger.show();
+                showError(err);
             }
         });
         $('#computeChange').click(function(){
@@ -55,8 +54,7 @@
                 $('#result-plan').html('plan: ' + changeGiver.stringifyMoney(plan));
                 $('#getChangeGiverStatus').click();
             } catch(err) {
-                Logger.log(err, 'alert-danger');
-                Logger.show();
+                showError(err);
             }
         });
         $('#getChangeGiverStatus').click(function(){

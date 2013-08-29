@@ -12,17 +12,17 @@ extra_desc: Visualization of all kinds of sorting algorithm
 extra_keywords: sort sorting algorithm visualization bogo bubble bucket cocktail counting comb heap insert intro merge quick radix select shell svg
 ---
 <link rel="stylesheet" href="{{page.base_url}}assets/css/graphics-and-multimedia/sorting-visualization.css" />
-<div id="controller">
-    <table class="table table-bordered table-condensed">
-        <tr class="active">
+<div id="controller" class="opacity08">
+    <table class="table table-bordered table-condensed margin0">
+        <tr class="success">
             <td>interval</td>
             <td><input class="w100per" id="interval-time" type="number" min="10" max="2000" placeholder="interval" value="50"/></td>
         </tr>
-        <tr class="active">
+        <tr class="success">
             <td>length</td>
             <td><input class="w100per" id="array-length" type="number" min="5" max="200" placeholder="length" value="10"/></td>
         </tr>
-        <tr class="active">
+        <tr class="success">
             <td>method</td>
             <td>
                 <select id="method" name="method">
@@ -43,14 +43,14 @@ extra_keywords: sort sorting algorithm visualization bogo bubble bucket cocktail
                 </select>
             </td>
         </tr>
-        <tr class="active">
+        <tr class="success">
             <td>sorted</td>
             <td>
                 <input name="is-pre-sorted" type="radio" value="1"/> Y
                 <input name="is-pre-sorted" type="radio" value="0" checked/> N
             </td>
         </tr>
-        <tr class="active">
+        <tr class="success">
             <td colspan="2">
                 <a class="btn btn-block btn-small btn-primary" id="init">init</a>
                 <a class="btn btn-block btn-small btn-success" id="start">start</a>
@@ -59,7 +59,7 @@ extra_keywords: sort sorting algorithm visualization bogo bubble bucket cocktail
         </tr>
     </table>
 </div>
-<object data="{{page.base_url}}assets/svg/graphics-and-multimedia/sorting-visualization.svg" type="image/svg+xml" id="svg-area"></object>
+<object data="{{page.base_url}}assets/svg/graphics-and-multimedia/sorting-visualization.svg" type="image/svg+xml" id="svg-area" class="overflow-hidden-x"></object>
 <script src="{{page.base_url}}assets/js/graphics-and-multimedia/sorting-visualization.config.js"></script>
 <script src="{{page.base_url}}assets/js/graphics-and-multimedia/sorting-visualization.svgBar.js"></script>
 <script src="{{page.base_url}}assets/js/graphics-and-multimedia/sorting-visualization.sorting.js"></script>

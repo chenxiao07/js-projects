@@ -7,8 +7,7 @@
                 result = RadixConvertor.NRadix2decimal(binaryInt, 2);
                 $('#result').html('binary int: <br>' + binaryInt + '<br> to decimal int: <br>' + result);
             } catch(err) {
-                Logger.log(err, 'alert-danger');
-                Logger.show();
+                showError(err);
             }
         });
         $('#btn-decimal2binary').click(function(){
@@ -17,8 +16,7 @@
                 result = RadixConvertor.decimal2NRadix(decimalInt, 2);
                 $('#result').html('decimal int: <br>' + decimalInt + '<br> to binary int: <br>' + result);
             } catch(err) {
-                Logger.log(err, 'alert-danger');
-                Logger.show();
+                showError(err);
             }
         });
     });

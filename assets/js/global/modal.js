@@ -1,24 +1,4 @@
 !function ($) {
-    var Logger = function(){
-        this.trigger = $('#show-modal-log');
-        this.content = $('#modal-log-content');
-    };
-    Logger.prototype = {
-        show : function(){
-            this.trigger.click();
-        },
-        clear : function(){
-            this.content.html('');
-            this.content.attr('class', '');
-        },
-        log : function(content, contentClass){
-            this.clear();
-            this.content.html(content);
-            if (contentClass !== undefined){
-                this.content.attr('class', contentClass);
-            }
-        }
-    };
     var RSLoader = function(){
         this.trigger = $('#show-modal-resource');
         this.title   = $('#modal-resource-title');
@@ -33,24 +13,36 @@
             this.content.attr('class', '');
             this.title.html('resource');
         },
-        load : function(content, title, contentClass){
+        load : function(content, title, style){
             this.clear();
             this.content.html(content);
             if (title !== undefined){
                 this.title.html(title);
             }
-            if (contentClass !== undefined){
-                this.content.attr('class', contentClass);
+            if (style !== undefined){
+                this.content.attr('class', style);
             }
         }
     };
-    window.Logger   = new Logger();
     window.RSLoader = new RSLoader();
 }(window.jQuery);
 
 !function ($) {
-    $('.btn-popover').on('click', function(){
-        RSLoader.load($(this).data('content'), $(this).data('title'));
+    var _showModal = function(content, title, style, defaultTitle, defaultStyle){
+        title = (title === undefined) ? defaultTitle : title;
+        style = (style === undefined) ? defaultStyle : style;
+        RSLoader.load(content, title, style);
         RSLoader.show();
+    };
+    var showError = function(err, title, style){
+        _showModal(err, title, style, 'ERROR', 'alert-danger');
+    };
+    var showInfo = function(info, title, style){
+        _showModal(info, title, style, 'INFO', 'alert-info');
+    };
+    $('.btn-load-resource').on('click', function(){
+        showInfo($(this).data('content'), $(this).data('title'), $(this).data('style'));
     });
+    window.showError = showError;
+    window.showInfo  = showInfo;
 }(window.jQuery);
