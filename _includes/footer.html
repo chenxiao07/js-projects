@@ -17,8 +17,8 @@
         {% if page.back_links %}{% for link in page.back_links %}<a href="{{page.base_url}}{{link.url}}" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-left"></span>{{link.title}}</a>{% endfor %}{% endif %}
     </div>
 </footer>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{page.base_url}}assets/js/jquery.min.js"></script>
+<script src="{{page.base_url}}assets/js/bootstrap.min.js"></script>
 <script src="{{page.base_url}}assets/js/global/modal.js"></script>
 <script src="{{page.base_url}}assets/js/global/validator.js"></script>
 <script src="{{page.base_url}}assets/js/global/misc.js"></script>

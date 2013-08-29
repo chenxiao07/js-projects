@@ -6,7 +6,6 @@
         $btnCountdown = document.getElementById('countdown'   ),
         $btnReset     = document.getElementById('reset'       ),
         intervalId;
-
     // sync input and value
     function syncInput($input){
         var valueId = $input.id.replace('input-', ''), $value = document.getElementById(valueId);
@@ -48,11 +47,9 @@
         syncInput($inputSecond);
     }
     reset();
-
     $inputHour.onchange   = function(){ syncInput(this); };
     $inputMinute.onchange = function(){ syncInput(this); };
     $inputSecond.onchange = function(){ syncInput(this); };
-
     $btnCountdown.onclick = function(){ countdown(); };
     $btnReset.onclick     = function(){ reset();     };
 })();

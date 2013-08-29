@@ -1,5 +1,4 @@
 ;(function(){
-
     window.addEventListener('load', function(){
         var nameForAmounts = {
             10000: '100元',
@@ -129,5 +128,4 @@
             }
         }
     }
-
 })();
