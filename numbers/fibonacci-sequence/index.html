@@ -12,15 +12,13 @@ extra_desc: Enter a number and have the program generate the Fibonacci sequence 
 extra_keywords: generate fibonacci sequence
 ---
 <div class="panel panel-default">
-    <div class="panel-heading">Fibonacci Sequence</div>
-
+    <div class="panel-heading">{{page.title}}</div>
     <div class="panel-body">
         <form class="form-horizontal" onsubmit="return false;">
             <div class="form-group">
                 <label for="length" class="control-label col-lg-2">length</label>
                 <div class="col-lg-10"><input class="form-control" id="length" type="number" value="3"/></div>
             </div>
-
             <div class="form-group">
                 <label for="operations" class="control-label col-lg-2">types</label>
                 <div id="operations" class="col-lg-10">
@@ -28,7 +26,6 @@ extra_keywords: generate fibonacci sequence
                     <button class="btn btn-block btn-primary" id="compute-recursion">recursion compute</button>
                 </div>
             </div>
-
             <div class="form-group">
                 <label for="result" class="control-label col-lg-2">result</label>
                 <div class="col-lg-10"><textarea class="form-control" id="result" name="result" rows="10"></textarea></div>
