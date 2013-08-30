@@ -14,11 +14,14 @@ extra_keywords: credit card validator luhn algrithm
 <div class="panel panel-default">
     <div class="panel-heading">{{page.title}}</div>
     <div class="panel-body">
-        <form action="#" id="form-validate-credit-card">
-            <dir class="row">
-                <div class="col-md-8"><input type="text" id="input-card-number" name="cardNumber" class="w100per font2 align-right" placeholder="credit card number"/></div>
-                <div class="col-md-4"><button type="submit" class="btn btn-block btn-lg btn-primary">validate</button></div>
-            </dir>
+        <form action="#" id="form-validate-credit-card" class="form-horizontal">
+             <div class="form-group">
+                <label for="input-card-number" class="col-lg-2 control-label">card number</label>
+                <div class="col-lg-10">
+                    <input type="text" id="input-card-number" name="cardNumber" class="form-control" placeholder="credit card number"/>
+                </div>
+             </div>
+             <button type="submit" class="btn btn-block btn-lg btn-primary">validate</button>
         </form>
     </div>
 </div>
