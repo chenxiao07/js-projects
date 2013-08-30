@@ -13,6 +13,35 @@ extra_keywords: unit converter, unit-converter, temp, currency, volume, mass,
 ---
 <div class="panel panel-default">
     <div class="panel-heading">{{page.title}}</div>
-    <div class="panel-body"></div>
+    <div class="panel-body">
+        <table class="table table-bordered table-hover">
+            <tr class="success">
+                <td>property</td>
+                <td><select id="select-property" name="property" class="form-control"></select></td>
+            </tr>
+            <tr>
+                <td><input id="input-numberA" type="number" name="numberA" class="form-control" placeholder="numberA"/></td>
+                <td><input id="input-numberB" type="number" name="numberB" class="form-control" placeholder="numberB"/></td>
+            </tr>
+            <tr>
+                <td><select id="select-unitA" name="unitA" class="form-control"></select></td>
+                <td><select id="select-unitB" name="unitB" class="form-control"></select></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-block btn-primary btn-lg" id="btn-A2B">convert <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-block btn-primary btn-lg" id="btn-B2A"><span class="glyphicon glyphicon-chevron-left"></span> convert</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.area.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.length.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.mass.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.temperature.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/unitConverter.volume.js"></script>
 <script src="{{page.base_url}}assets/js/numbers/unit-converter.main.js"></script>

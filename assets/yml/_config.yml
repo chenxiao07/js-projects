@@ -24,7 +24,7 @@ map:
     contents:
       - sort: numbers
         total_amount: 16
-        finished_amount: 13
+        finished_amount: 14
         links:
           - name: alarm-clock
             is_finished: 1
@@ -72,7 +72,7 @@ map:
             is_finished: 0
             description: Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.
           - name: unit-converter
-            is_finished: 0
+            is_finished: 1
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
       - sort: text
         total_amount: 17

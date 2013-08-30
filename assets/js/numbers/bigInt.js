@@ -118,22 +118,18 @@
         result.remainderDigits = (tempArray.length === 0) ? [0] : tempArray;
         return result;
     }
-
     var BigInt = function(str){
         this.digits     = []     ;
         this.isNegative = 0      ;
         this.version    = '0.01' ;
         this.originStr  = ''     ;
-
         if (!str || !str.match(/^-?[0-9]\d*$/)){
             throw new Error('BigInt Error: Format not currect: ' + str);
         }
-
         if (str.charAt(0) === '-'){
             this.isNegative = 1;
             str = str.slice(1);
         }
-
         str = str.replace(/^0+/g, '');
         str = (str.length === 0) ? '0' : str;
         var i;
@@ -142,7 +138,6 @@
         }
         this.originStr = this.isNegative ? '-' + str : str;
     };
-
     BigInt.prototype = {
         clone : function(){
             return new BigInt(this.originStr);
@@ -153,7 +148,6 @@
                  ? new BigInt(this.originStr.slice(1))
                  : new BigInt('-' + this.originStr);
         },
-
         compare : function(that){
             if (this.isNegative !== that.isNegative){
                 return this.isNegative ? -1 : 1;
@@ -167,7 +161,6 @@
         compareDigits : function(that){
             return _compareArray(this.digits, that.digits);
         },
-
         isEqual : function(that){
             return (this.compare(that) === 0) ? 1 : 0;
         },
@@ -180,7 +173,6 @@
         isLessThan : function(that){
             return (this.compare(that) === -1) ? 1 : 0;
         },
-
         // this + that
         plus : function(that){
             if (this.isNegative !== that.isNegative){
@@ -194,7 +186,6 @@
                  ? new BigInt('-' + resultDigits.join(''))
                  : new BigInt(resultDigits.join(''));
         },
-
         // this - that
         minus : function(that){
             if (this.isNegative !== that.isNegative){
@@ -209,12 +200,10 @@
                 resultDigits = (compareDigitsResult === 1)
                              ? _minus(this.digits, that.digits)
                              : _minus(that.digits, this.digits);
-
             return isNegative
                  ? new BigInt('-' + resultDigits.join(''))
                  : new BigInt(resultDigits.join(''));
         },
-
         // this * that
         // TODO use faster algrithm, like FFT.
         multiply : function(that){
@@ -225,7 +214,6 @@
                  ? new BigInt('-' + resultDigits.join(''))
                  : new BigInt(resultDigits.join(''));
         },
-
         // this / that
         // TODO use faster algrithm
         divide : function(that){
@@ -263,6 +251,5 @@
             return result.remainder;
         }
     };
-
     exports.BigInt = BigInt;
 })(typeof exports !== 'undefined' ? exports : this);
