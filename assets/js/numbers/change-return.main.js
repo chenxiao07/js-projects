@@ -21,7 +21,6 @@
                 initValues[key] = defaultValue;
             }
         }
-
         var $initForm   = $('#init-form'  ),
             $paidForm   = $('#paid-form'  ),
             $statusForm = $('#status-form');
@@ -29,11 +28,8 @@
         _initForm(nameForAmounts, $paidForm  );
         _initForm(nameForAmounts, $statusForm);
         _setFormValues($initForm, initValues);
-
         var changeGiver = new ChangeGiver();
-
         var price, paid, plan;
-
         $('#initChangeGiver').click(function(){
             try {
                 var money = _getFormValues($initForm);
@@ -75,7 +71,6 @@
             );
         });
     });
-
     function _changeFormGroup(isSuccess, $obj){
         if (isSuccess){
             _setFormGroupStat($obj.parent().parent(), 'has-success');
@@ -87,7 +82,6 @@
         $obj.attr('class', 'form-group');
         $obj.addClass(stat);
     }
-
     function _initForm(dataHash, $form){
         var prefix = $form.data('prefix');
         var keys, key, i, id, addHtml;
