@@ -6,7 +6,7 @@ extra_keywords:
 slug: homepage
 ---
 {% for cat in site.map %}
-<div class="row margin-bottom1">
+<div class="margin-bottom1">
     <h4><span class="label label-default">{{cat.category}}</span></h4>
 {% for content in cat.contents %}{% include accordion.html tag = content is_collapsed = 1 %}{% endfor %}
 </div>
