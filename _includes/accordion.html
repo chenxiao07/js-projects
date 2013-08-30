@@ -1,15 +1,15 @@
 <div class="panel-group" id="{{include.tag.sort}}">
-    <div class="panel {% if include.tag.finished_amount > 0 %} panel-success {% else %} panel-warning {% endif %}">
+    <div class="panel panel-default">
         <div class="panel-heading cursor-pointer" data-toggle="collapse" data-parent="#{{include.tag.sort}}" href="#{{include.tag.sort}}-content" class="accordion-toggle panel-heading">
             {{include.tag.sort}}
             <span class="label {% if include.tag.finished_amount > 0 %} label-success {% else %} label-warning {% endif %} float-right">{{include.tag.finished_amount}} / {{include.tag.total_amount}}</span>
         </div>
         <div id="{{include.tag.sort}}-content" class="panel-collapse collapse {% if include.is_collapsed %} {% else %} in {% endif %}">
             <div class="accordion-inner">
-                <table class="table table-bordered">
-                    {% for link in include.tag.links %}<tr>
-                        <td><a href="{{page.base_url}}{{include.tag.sort}}/{{link.name}}" title="{{link.name}}" class="btn btn-block {% if link.is_finished == 0 %} btn-link"  disabled {% else %} btn-success" {% endif %}><span class="limit-len len12">{{link.name}}</span></a></td>
-                        <td><button type="button" class="btn btn-block btn-link btn-load-resource" data-content="{{link.description}}" data-title="{{link.name}}">desc</button></td>
+                <table class="table table-bordered margin-bottom0">
+                    {% for link in include.tag.links %}<tr class="{% if link.is_finished == 1 %}success{% else %}warning{% endif %}">
+                        <td><a href="{{page.base_url}}{{include.tag.sort}}/{{link.name}}" title="{{link.name}}" class="btn btn-block btn-link" {% if link.is_finished == 0 %}disabled="true"{% endif %}><span class="limit-len len12">{{link.name}}</span></a></td>
+                        <td><a class="btn btn-block btn-link btn-load-resource" data-content="{{link.description}}" data-title="{{link.name}}"><span class="glyphicon glyphicon-file"></span> desc</a></td>
                     </tr>{% endfor %}
                 </table>
             </div>

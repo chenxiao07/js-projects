@@ -13,8 +13,9 @@
         </div>
     </div>
     <div class="btn-group-vertical w100per margin-top1" id="btn-group-back-links">
-        <a href="#top" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-up"></span>top</a>
-        {% if page.back_links %}{% for link in page.back_links %}<a href="{{page.base_url}}{{link.url}}" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-left"></span>{{link.title}}</a>{% endfor %}{% endif %}
+        {% if page.extra_desc %}<a class="btn btn-lg btn-block btn-primary btn-load-resource opacity05" data-content="{{page.extra_desc}}" data-title="{{page.title}}"><span class="glyphicon glyphicon-file"></span> desc</a></td>{% endif %}
+        <a href="#top" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-up"></span> top</a>
+        {% if page.back_links %}{% for link in page.back_links %}<a href="{{page.base_url}}{{link.url}}" class="btn btn-lg btn-primary opacity05"><span class="glyphicon glyphicon-chevron-left"></span> {{link.title}}</a>{% endfor %}{% endif %}
     </div>
 </footer>
 <script src="{{page.base_url}}assets/js/jquery.min.js"></script>
