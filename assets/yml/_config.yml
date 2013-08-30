@@ -17,7 +17,7 @@ map:
     contents:
       - sort: numbers
         total_amount: 16
-        finished_amount: 12
+        finished_amount: 13
         links:
           - name: alarm-clock
             is_finished: 1
@@ -38,7 +38,7 @@ map:
             is_finished: 1
             description: Calculate the total cost of tile it would take to cover a floor plan of width and height, using a cost entered by the user.
           - name: credit-card-validator
-            is_finished: 0
+            is_finished: 1
             description: Takes in a credit card number of a common credit card vendor (Visa, Master- Card, American Express, Discoverer) and validates it to make sure that it is a valid number (look into how credit cards use a checksum).
           - name: distance-between-2-cities
             is_finished: 1
