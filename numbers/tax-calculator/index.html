@@ -1,0 +1,37 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: numbers
+    url: numbers
+  - title: home
+    url: 
+slug: basic
+title: tax calculator
+extra_desc: Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.
+extra_keywords: tax-calculator, tax calculator, tax, calculator,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td colspan="2">price</td>
+                <td colspan="2">tax rate</td>
+                <td>compute</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td><input class="w100per" id="input-price" type="number" value="5000"/></td>
+                <td><input class="w100per" id="input-rate" type="number" value="5"/></td>
+                <td>%</td>
+                <td><button class="btn btn-block btn-small btn-primary" id="btn-compute">compute</button></td>
+            </tr>
+        </table>
+        <div id="result" class="alert alert-success">
+            <div id="result-tax" class="row"></div>
+            <div id="result-total" class="row"></div>
+        </div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/numbers/tax-calculator.main.js"></script>

@@ -24,7 +24,7 @@ map:
     contents:
       - sort: numbers
         total_amount: 16
-        finished_amount: 14
+        finished_amount: 15
         links:
           - name: alarm-clock
             is_finished: 1
@@ -69,7 +69,7 @@ map:
             is_finished: 1
             description: Have the user enter a number and find all Prime Factors (if there are any) and display them.
           - name: tax-calculator
-            is_finished: 0
+            is_finished: 1
             description: Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.
           - name: unit-converter
             is_finished: 1

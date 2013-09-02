@@ -1,5 +1,4 @@
 ;(function(){
-
     window.addEventListener('load', function(){
         var principal, interest, term, i, monthly, paid, $table;
         document.getElementById('mortgage-compute').addEventListener('click', function(){
@@ -13,7 +12,6 @@
                 _addMonthly(i, monthly, $table);
             }
         });
-
         document.getElementById('loan-compute').addEventListener('click', function(){
             principal = parseFloat(document.getElementById('loan-principal'     ).value , 10 );
             interest  = parseFloat(document.getElementById('loan-interest-rate' ).value , 10 );
@@ -28,7 +26,6 @@
             }
         });
     });
-
     /*
      * M = p * i * (1 + i)^n / ((1 + i)^n - 1)  -- mortgage
      * M = (p / n) + (p - total_paid) * i       -- loan
@@ -39,7 +36,6 @@
     var _countLoanMonthly = function(principal, interest, term, paid){
         return (principal / term) + interest * (principal - paid);
     };
-
     var _addMonthly = function(n, m, $table){
         $table.innerHTML += '<tr>'
                           +     '<td>' +  n + '</td>'
@@ -52,5 +48,4 @@
                          +     '<td>payment</td>'
                          + '</tr>';
     };
-
 })();
