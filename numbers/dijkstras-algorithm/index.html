@@ -1,0 +1,40 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: numbers
+    url: numbers
+  - title: home
+    url: 
+slug: numbers
+title: dijkstras algorithm
+extra_desc: Create a program that finds the shortest path through a graph using its edges.
+extra_keywords: dijkstras-algorithm, dijkstras, graph, shortest path,
+---
+<div class="right-controller" class="opacity08">
+    <table class="table table-bordered table-condensed margin0">
+        <tr class="active">
+            <td>graph</td>
+            <td><select id="select-graph"></select></td>
+        </tr>
+        <tr class="active">
+            <td>from</td>
+            <td><select id="select-from-node"></select></td>
+        </tr>
+        <tr class="active">
+            <td>to</td>
+            <td><select id="select-to-node"></select></td>
+        </tr>
+        <tr class="active">
+            <td colspan="2">
+                <a class="btn btn-block btn-small btn-primary" id="btn-init-graph">init graph</a>
+                <a class="btn btn-block btn-small btn-success" id="btn-show-path">show path</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<object data="{{page.base_url}}assets/svg/blank.svg" type="image/svg+xml" id="svg-area" class="overflow-hidden-x"></object>
+<script src="{{page.base_url}}assets/js/numbers/dijkstras.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/dijkstras.maps.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/dijkstras.graph.js"></script>
+<script src="{{page.base_url}}assets/js/numbers/dijkstras-algorithm.main.js"></script>

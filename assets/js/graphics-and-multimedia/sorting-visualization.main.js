@@ -4,8 +4,7 @@
             svgDoc = $svg.contentDocument,
             sorting;
         document.getElementById('init').addEventListener('click', function(){
-            var $controller  = document.getElementById('controller'),
-                arrayLength  = document.getElementById('array-length').value  || 10,
+            var arrayLength  = document.getElementById('array-length').value  || 10,
                 intervalTime = document.getElementById('interval-time').value || 50;
             var tempHeight   = (window.innerHeight - 120) / arrayLength - 2,
                 itemHeight;

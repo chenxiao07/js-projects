@@ -24,7 +24,7 @@ map:
     contents:
       - sort: numbers
         total_amount: 16
-        finished_amount: 15
+        finished_amount: 16
         links:
           - name: alarm-clock
             is_finished: 1
@@ -51,7 +51,7 @@ map:
             is_finished: 1
             description: Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates of the cities like latitude and longitude.
           - name: dijkstras-algorithm
-            is_finished: 0
+            is_finished: 1
             description: Create a program that finds the shortest path through a graph using its edges.
           - name: fibonacci-sequence
             is_finished: 1
