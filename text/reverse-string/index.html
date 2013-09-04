@@ -1,0 +1,27 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: text
+    url: text
+  - title: home
+    url: 
+slug: basic
+title: reverse a string
+extra_desc: Enter a string and the program will reverse it and print it out.
+extra_keywords: reverse-string reverse, string,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td><input class="w100per form-control" id="input-string" type="text" placeholder="input a string to reverse"/></td>
+                <td><button class="btn btn-small btn-primary btn-block" id="btn-reverse">reverse</button></td>
+            </tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/text/reverse-sting.main.js"></script>
