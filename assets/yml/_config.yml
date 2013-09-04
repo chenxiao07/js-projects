@@ -75,7 +75,7 @@ map:
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
       - sort: text
         total_amount: 17
-        finished_amount: 1
+        finished_amount: 2
         links:
           - name: cd-key-generator
             is_finished: 0
@@ -102,7 +102,7 @@ map:
             is_finished: 0
             description: A program where you can add text reminders and post them. You can have the program also add popup reminders.
           - name: pig-latin
-            is_finished: 0
+            is_finished: 1
             description: Pig Latin is a game of alterations played on the English language game. To form the Pig Latin form of an English word the initial consonant sound is trans- posed to the end of the word and an ay is affixed (Ex. ”banana” would yield anana-bay). Read Wikipedia for more information on rules.
           - name: quote-tracker
             is_finished: 0

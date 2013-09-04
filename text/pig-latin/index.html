@@ -1,0 +1,26 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: text
+    url: text
+  - title: home
+    url: 
+slug: basic
+title: pig latin
+extra_desc: Pig Latin is a game of alterations played on the English language game. To form the Pig Latin form of an English word the initial consonant sound is trans- posed to the end of the word and an ay is affixed (Ex. ”banana” would yield anana-bay). Read Wikipedia for more information on rules.
+extra_keywords: pig-latin pig latin, string,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr><td><textarea class="w100per form-control" id="input-sentence" placeholder="input a sentence to convert"></textarea></td></tr>
+            <tr><td><button class="btn btn-primary btn-block" id="btn-convert">convert</button></td></tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/text/pigLatin.js"></script>
+<script src="{{page.base_url}}assets/js/text/pig-latin.main.js"></script>
