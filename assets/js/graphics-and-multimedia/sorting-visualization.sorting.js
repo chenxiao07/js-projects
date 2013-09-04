@@ -1,4 +1,3 @@
-
 ;(function(){
     var Sorting = function(options){
         this.svgDoc        = options.svgDoc;
@@ -39,4 +38,3 @@
 
     window.Sorting = Sorting;
 })();
-
