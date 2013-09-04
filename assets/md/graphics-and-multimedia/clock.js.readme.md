@@ -1,6 +1,6 @@
 # clock.js
 
-a clock written in pure javascript using canvas. see [demo](http://leungwensen.github.io/clock.js)
+a clock written in pure javascript using canvas. see [demo](http://leungwensen.github.io/graphics-and-multimedia/clock.js/)
 
 ## usage
 
