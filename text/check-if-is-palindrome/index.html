@@ -1,0 +1,27 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: text
+    url: text
+  - title: home
+    url: 
+slug: basic
+title: check if a string is palindrome
+extra_desc: Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like racecar.
+extra_keywords: check-if-if-palindrome, check if palindrome, palindrome,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td><input class="w100per form-control" id="input-string" type="text" placeholder="input a string to check"/></td>
+                <td><button class="btn btn-small btn-primary btn-block" id="btn-check">check</button></td>
+            </tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/text/check-if-is-palindrome.main.js"></script>
