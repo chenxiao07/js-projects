@@ -75,7 +75,7 @@ map:
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
       - sort: text
         total_amount: 17
-        finished_amount: 2
+        finished_amount: 3
         links:
           - name: cd-key-generator
             is_finished: 0
@@ -86,8 +86,8 @@ map:
           - name: count-words-in-string
             is_finished: 0
             description: Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
-          - name: count-vowel
-            is_finished: 0
+          - name: count-vowels
+            is_finished: 1
             description: Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
           - name: guestbook-journal
             is_finished: 0

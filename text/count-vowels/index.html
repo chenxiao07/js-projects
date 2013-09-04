@@ -1,0 +1,28 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: text
+    url: text
+  - title: home
+    url: 
+slug: basic
+title: count vowels
+extra_desc: Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
+extra_keywords: count-vowels, count vowels, vowel,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td><input class="w100per form-control" id="input-string" type="text" placeholder="input a string to count vowels"/></td>
+                <td><button class="btn btn-small btn-primary btn-block" id="btn-count">count</button></td>
+            </tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/text/charCounter.js"></script>
+<script src="{{page.base_url}}assets/js/text/count-vowels.main.js"></script>
