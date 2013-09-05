@@ -75,7 +75,7 @@ map:
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
       - sort: text
         total_amount: 17
-        finished_amount: 4
+        finished_amount: 5
         links:
           - name: cd-key-generator
             is_finished: 0
@@ -84,7 +84,7 @@ map:
             is_finished: 1
             description: Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like racecar
           - name: count-words-in-string
-            is_finished: 0
+            is_finished: 1
             description: Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
           - name: count-vowels
             is_finished: 1

@@ -1,0 +1,27 @@
+---
+layout: base
+base_url: "../../"
+back_links:
+  - title: text
+    url: text
+  - title: home
+    url: 
+slug: basic
+title: count words in a string
+extra_desc: Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
+extra_keywords: count words,
+---
+<div class="panel panel-default">
+    <div class="panel-heading">{{page.title}}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <td><input class="w100per form-control" id="input-string" type="text" placeholder="input a string to count"/></td>
+                <td><button class="btn btn-small btn-primary btn-block" id="btn-count">count</button></td>
+            </tr>
+        </table>
+        <h4>result: </h4>
+        <div id="result" class="alert alert-info"></div>
+    </div>
+</div>
+<script src="{{page.base_url}}assets/js/text/count-words-in-sting.main.js"></script>
