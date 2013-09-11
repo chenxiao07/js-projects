@@ -75,7 +75,7 @@ map:
             description: Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
       - sort: text
         total_amount: 17
-        finished_amount: 5
+        finished_amount: 6
         links:
           - name: cd-key-generator
             is_finished: 0
@@ -123,7 +123,7 @@ map:
             is_finished: 0
             description: Converts text files into web HTML files and stylizes them. Great for making online documentation of standard text documentation.
           - name: text-editor
-            is_finished: 0
+            is_finished: 1
             description: Notepad style application that can open, edit, and save text documents. Add syntax highlighting and other features.
           - name: vigenere-vernam-ceasar-ciphers
             is_finished: 0

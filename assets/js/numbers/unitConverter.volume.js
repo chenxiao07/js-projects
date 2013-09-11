@@ -8,18 +8,18 @@
         },
         'litre': {
             'symbol'    : 'l',
-            'fromBasic' : function(value){ return value * Math.pow(10, 3); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 3); }
+            'fromBasic' : function(value){ return value * 1E3; },
+            'toBasic'   : function(value){ return value / 1E3; }
         },
         'millilitre': {
             'symbol'    : 'ml',
-            'fromBasic' : function(value){ return value * Math.pow(10, 6); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 6); }
+            'fromBasic' : function(value){ return value * 1E6; },
+            'toBasic'   : function(value){ return value / 1E6; }
         },
         'lambda': {
             'symbol'    : 'λ',
-            'fromBasic' : function(value){ return value * Math.pow(10, 9); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 9); }
+            'fromBasic' : function(value){ return value * 1E9; },
+            'toBasic'   : function(value){ return value / 1E9; }
         },
         'acreFoot': {
             'symbol'    : 'ac-ft',
@@ -48,8 +48,8 @@
         },
         'boardFoot': {
             'symbol'    : 'fbm',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 2.359737216; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 2.359737216; }
+            'fromBasic' : function(value){ return (value * 1E3) / 2.359737216; },
+            'toBasic'   : function(value){ return (value / 1E3) * 2.359737216; }
         },
         'bucket': {
             'symbol'    : 'bkt',
@@ -83,8 +83,8 @@
         },
         'cubicInch': {
             'symbol'    : 'in3',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 16.387064; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 16.387064; }
+            'fromBasic' : function(value){ return (value * 1E6) / 16.387064; },
+            'toBasic'   : function(value){ return (value / 1E6) * 16.387064; }
         },
         'cubicMile': {
             'symbol'    : 'mi3',
@@ -98,83 +98,83 @@
         },
         'cup': {
             'symbol'    : 'c',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 250; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 250; }
+            'fromBasic' : function(value){ return (value * 1E6) / 250; },
+            'toBasic'   : function(value){ return (value / 1E6) * 250; }
         },
         'gallonBeer': {
             'symbol'    : 'gal-beer',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 4.621152048; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 4.621152048; }
+            'fromBasic' : function(value){ return (value * 1E3) / 4.621152048; },
+            'toBasic'   : function(value){ return (value / 1E3) * 4.621152048; }
         },
         'gallonEngland': {
             'symbol'    : 'gal-en',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 4.54609; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 4.54609; }
+            'fromBasic' : function(value){ return (value * 1E3) / 4.54609; },
+            'toBasic'   : function(value){ return (value / 1E3) * 4.54609; }
         },
         'gallonDryUS': {
             'symbol'    : 'gal-dry-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 4.40488377086; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 4.40488377086; }
+            'fromBasic' : function(value){ return (value * 1E3) / 4.40488377086; },
+            'toBasic'   : function(value){ return (value / 1E3) * 4.40488377086; }
         },
         'gallonFluidUS': {
             'symbol'    : 'gal-fluid-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 3.785411784; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 3.785411784; }
+            'fromBasic' : function(value){ return (value * 1E3) / 3.785411784; },
+            'toBasic'   : function(value){ return (value / 1E3) * 3.785411784; }
         },
         'gillEngland': {
             'symbol'    : 'gi-en',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 142.0653125; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 142.0653125; }
+            'fromBasic' : function(value){ return (value * 1E6) / 142.0653125; },
+            'toBasic'   : function(value){ return (value / 1E6) * 142.0653125; }
         },
         'gillUS': {
             'symbol'    : 'gi-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 118.29411825; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 118.29411825; }
+            'fromBasic' : function(value){ return (value * 1E6) / 118.29411825; },
+            'toBasic'   : function(value){ return (value / 1E6) * 118.29411825; }
         },
         'ounceFluidImperial': {
             'symbol'    : 'oz-fl-imp',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 28.4130625; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 28.4130625; }
+            'fromBasic' : function(value){ return (value * 1E6) / 28.4130625; },
+            'toBasic'   : function(value){ return (value / 1E6) * 28.4130625; }
         },
         'ounceFluidUSCustomary': {
             'symbol'    : 'oz-fl-us-ct',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 29.5735295625; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 29.5735295625; }
+            'fromBasic' : function(value){ return (value * 1E6) / 29.5735295625; },
+            'toBasic'   : function(value){ return (value / 1E6) * 29.5735295625; }
         },
         'ounceFluidUSFood': {
             'symbol'    : 'oz-fl-us-fd',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 5)) / 3; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 5)) * 3; }
+            'fromBasic' : function(value){ return (value * 1E5) / 3; },
+            'toBasic'   : function(value){ return (value / 1E5) * 3; }
         },
         'pintImp': {
             'symbol'    : 'pt-imp',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 568.26125; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 568.26125; }
+            'fromBasic' : function(value){ return (value * 1E6) / 568.26125; },
+            'toBasic'   : function(value){ return (value / 1E6) * 568.26125; }
         },
         'pintDryUS': {
             'symbol'    : 'pt-dry-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 550.6104713575; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 550.6104713575; }
+            'fromBasic' : function(value){ return (value * 1E6) / 550.6104713575; },
+            'toBasic'   : function(value){ return (value / 1E6) * 550.6104713575; }
         },
         'pintFluidUS': {
             'symbol'    : 'pt-fl-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 473.176473; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 473.176473; }
+            'fromBasic' : function(value){ return (value * 1E6) / 473.176473; },
+            'toBasic'   : function(value){ return (value / 1E6) * 473.176473; }
         },
         'quartImp': {
             'symbol'    : 'qt-imp',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 1.1365225; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 1.1365225; }
+            'fromBasic' : function(value){ return (value * 1E3) / 1.1365225; },
+            'toBasic'   : function(value){ return (value / 1E3) * 1.1365225; }
         },
         'quartDryUS': {
             'symbol'    : 'qt-dry-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 3)) / 1.101220942715; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 3)) * 1.101220942715; }
+            'fromBasic' : function(value){ return (value * 1E3) / 1.101220942715; },
+            'toBasic'   : function(value){ return (value / 1E3) * 1.101220942715; }
         },
         'quartFluidUS': {
             'symbol'    : 'qt-fl-us',
-            'fromBasic' : function(value){ return (value * Math.pow(10, 6)) / 946.352946; },
-            'toBasic'   : function(value){ return (value / Math.pow(10, 6)) * 946.352946; }
+            'fromBasic' : function(value){ return (value * 1E6) / 946.352946; },
+            'toBasic'   : function(value){ return (value / 1E6) * 946.352946; }
         }
     };
 })();

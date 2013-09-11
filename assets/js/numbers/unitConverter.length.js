@@ -8,58 +8,58 @@
         },
         'decimetre': {
             'symbol'    : 'dm',
-            'fromBasic' : function(value){ return value * Math.pow(10, 1); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 1); }
+            'fromBasic' : function(value){ return value * 1E1; },
+            'toBasic'   : function(value){ return value / 1E1; }
         },
         'centimetre': {
             'symbol'    : 'cm',
-            'fromBasic' : function(value){ return value * Math.pow(10, 2); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 2); }
+            'fromBasic' : function(value){ return value * 1E2; },
+            'toBasic'   : function(value){ return value / 1E2; }
         },
         'millimetre': {
             'symbol'    : 'mm',
-            'fromBasic' : function(value){ return value * Math.pow(10, 3); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 3); }
+            'fromBasic' : function(value){ return value * 1E3; },
+            'toBasic'   : function(value){ return value / 1E3; }
         },
         'micrometre': {
             'symbol'    : 'µm',
-            'fromBasic' : function(value){ return value * Math.pow(10, 6); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 6); }
+            'fromBasic' : function(value){ return value * 1E6; },
+            'toBasic'   : function(value){ return value / 1E6; }
         },
         'nanometre': {
             'symbol'    : 'nm',
-            'fromBasic' : function(value){ return value * Math.pow(10, 9); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 9); }
+            'fromBasic' : function(value){ return value * 1E9; },
+            'toBasic'   : function(value){ return value / 1E9; }
         },
         'decametre': {
             'symbol'    : 'dam',
-            'fromBasic' : function(value){ return value / Math.pow(10, 1); },
-            'toBasic'   : function(value){ return value * Math.pow(10, 1); }
+            'fromBasic' : function(value){ return value / 1E1; },
+            'toBasic'   : function(value){ return value * 1E1; }
         },
         'hectometre': {
             'symbol'    : 'hm',
-            'fromBasic' : function(value){ return value / Math.pow(10, 2); },
-            'toBasic'   : function(value){ return value * Math.pow(10, 2); }
+            'fromBasic' : function(value){ return value / 1E2; },
+            'toBasic'   : function(value){ return value * 1E2; }
         },
         'kilometre': {
             'symbol'    : 'km',
-            'fromBasic' : function(value){ return value / Math.pow(10, 3); },
-            'toBasic'   : function(value){ return value * Math.pow(10, 3); }
+            'fromBasic' : function(value){ return value / 1E3; },
+            'toBasic'   : function(value){ return value * 1E3; }
         },
         'cnLi3': {
             'symbol'    : '里',
-            'fromBasic' : function(value){ return value / (Math.pow(10, 2) * 5); },
-            'toBasic'   : function(value){ return value * (Math.pow(10, 2) * 5); }
+            'fromBasic' : function(value){ return value / (1E2 * 5); },
+            'toBasic'   : function(value){ return value * (1E2 * 5); }
         },
         'cnYin': {
             'symbol'    : '引',
-            'fromBasic' : function(value){ return (value / Math.pow(10, 2)) * 3; },
-            'toBasic'   : function(value){ return (value * Math.pow(10, 2)) / 3; }
+            'fromBasic' : function(value){ return (value / 1E2) * 3; },
+            'toBasic'   : function(value){ return (value * 1E2) / 3; }
         },
         'cnZhang': {
             'symbol'    : '丈',
-            'fromBasic' : function(value){ return (value / Math.pow(10, 1)) * 3; },
-            'toBasic'   : function(value){ return (value * Math.pow(10, 1)) / 3; }
+            'fromBasic' : function(value){ return (value / 1E1) * 3; },
+            'toBasic'   : function(value){ return (value * 1E1) / 3; }
         },
         'cnChi': {
             'symbol'    : '尺',
@@ -68,23 +68,23 @@
         },
         'cnCun': {
             'symbol'    : '寸',
-            'fromBasic' : function(value){ return value * (Math.pow(10, 1) * 3); },
-            'toBasic'   : function(value){ return value / (Math.pow(10, 1) * 3); }
+            'fromBasic' : function(value){ return value * (1E1 * 3); },
+            'toBasic'   : function(value){ return value / (1E1 * 3); }
         },
         'cnFen': {
             'symbol'    : '分',
-            'fromBasic' : function(value){ return value * (Math.pow(10, 2) * 3); },
-            'toBasic'   : function(value){ return value / (Math.pow(10, 2) * 3); }
+            'fromBasic' : function(value){ return value * (1E2 * 3); },
+            'toBasic'   : function(value){ return value / (1E2 * 3); }
         },
         'cnLi2': {
             'symbol'    : '厘',
-            'fromBasic' : function(value){ return value * (Math.pow(10, 3) * 3); },
-            'toBasic'   : function(value){ return value / (Math.pow(10, 3) * 3); }
+            'fromBasic' : function(value){ return value * (1E3 * 3); },
+            'toBasic'   : function(value){ return value / (1E3 * 3); }
         },
         'cnHao': {
             'symbol'    : '毫',
-            'fromBasic' : function(value){ return value * (Math.pow(10, 4) * 3); },
-            'toBasic'   : function(value){ return value / (Math.pow(10, 4) * 3); }
+            'fromBasic' : function(value){ return value * (1E4 * 3); },
+            'toBasic'   : function(value){ return value / (1E4 * 3); }
         },
         'mile': {
             'symbol'    : 'mi',

@@ -8,28 +8,28 @@
         },
         'gram': {
             'symbol'    : 'g',
-            'fromBasic' : function(value){ return value * Math.pow(10, 3); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 3); }
+            'fromBasic' : function(value){ return value * 1E3; },
+            'toBasic'   : function(value){ return value / 1E3; }
         },
         'milligram': {
             'symbol'    : 'mg',
-            'fromBasic' : function(value){ return value * Math.pow(10, 6); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 6); }
+            'fromBasic' : function(value){ return value * 1E6; },
+            'toBasic'   : function(value){ return value / 1E6; }
         },
         'microgram': {
             'symbol'    : 'μg',
-            'fromBasic' : function(value){ return value * Math.pow(10, 9); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 9); }
+            'fromBasic' : function(value){ return value * 1E9; },
+            'toBasic'   : function(value){ return value / 1E9; }
         },
         'nanogram': {
             'symbol'    : 'ng',
-            'fromBasic' : function(value){ return value * Math.pow(10, 12); },
-            'toBasic'   : function(value){ return value / Math.pow(10, 12); }
+            'fromBasic' : function(value){ return value * 1E12; },
+            'toBasic'   : function(value){ return value / 1E12; }
         },
         'megagram': {
             'symbol'    : 'T',
-            'fromBasic' : function(value){ return value / Math.pow(10, 3); },
-            'toBasic'   : function(value){ return value * Math.pow(10, 3); }
+            'fromBasic' : function(value){ return value / 1E3; },
+            'toBasic'   : function(value){ return value * 1E3; }
         },
         'danCn': {
             'symbol'    : '担',
